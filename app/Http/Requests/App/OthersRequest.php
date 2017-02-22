@@ -11,8 +11,7 @@ class OthersRequest extends ValidateRequest
 
     protected $storeContacts=[
       'email' => [
-        'required',
-        'email'
+        'required'
       ],
       'name' => [
         'required'

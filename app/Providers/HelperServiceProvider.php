@@ -31,11 +31,12 @@ class HelperServiceProvider extends ServiceProvider
     public function register()
     {
       //echo "ol mundo";
-      print_r(glob('app/Helpers/*.php'));
+      //print_r(glob('app/Helpers/*.php'));
+      require base_path('app/Http/Helpers/CustomRules.php');
 
-      foreach (glob(app_path().'/Helpers/*.php') as $filename){
-        echo $filename;
-          require_once($filename);
-      }
+      // foreach (glob(app_path().'/Helpers/*.php') as $filename){
+      //   echo $filename;
+      //     require_once($filename);
+      // }
     }
 }

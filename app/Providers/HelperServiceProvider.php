@@ -32,6 +32,7 @@ class HelperServiceProvider extends ServiceProvider
     {
       //echo "ol mundo";
       foreach (glob(app_path().'/Helpers/*.php') as $filename){
+        echo $filename;
           require_once($filename);
       }
     }

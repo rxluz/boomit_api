@@ -21,5 +21,11 @@ Route::get('test', function(){
     setRule()
     ->type('typeanyone')
     ->table(get__param('teste'))
-    ->fields(get__const('teste'));
+    ->fields(
+      [
+        {"name" => "test", "value" => get__const('value1')},
+        {"name" => "test1", "value" => get__const('value2')},
+        {"name" => "test1", "value" => get__const('value3')}
+      ]
+    );
 });

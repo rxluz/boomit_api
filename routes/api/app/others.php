@@ -18,19 +18,17 @@ $response["200"]=function(){
 Route::post('contacts', 'App\OthersController@storeContacts');
 Route::get('test/{testparam?}', function(){
   echo
-    set__rule('namerule')
-    ->type('typeanyone')
-    ->table(get__param('testparam'))
+    set__rule('data')
+    ->type('exists')
+    ->table("users")
     ->fields(
       [
-        ["name" => is__between(0, 50), "value" => get__const('value1')],
-        ["name" => is__smaller(get__const('value3')), "value" => get__const('value2')],
-        ["name" => "test1", "value" => get__const('value3')]
+        ["name" => "id", "value" => is_greater(get__post("min_id"))]
       ]
     )
     ->excepts(
       [
-        ["name" => is__greater("450"), "value" => get__const('exceptvalue1')]
+        ["name" => "active", "value" => is_value("1")]
       ]
     );
 });

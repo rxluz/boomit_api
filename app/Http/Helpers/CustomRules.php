@@ -28,12 +28,7 @@ class setRuler {
         $x=0;
         foreach($fieldsList as $field){
           $this->fieldsList=
-            $this->fieldsList
-            .",field.$x="
-            .$field["name"]
-            .",value.$x="
-            .$field["value"];
-
+            $this->fieldsList." ".$field["name"].$field["value"]." AND ";
           $x++;
         }
       }
@@ -63,6 +58,9 @@ class setRuler {
     public function __toString() {
       $ret=$this->nameRule.$this->typeName.$this->tableName.$this->fieldsList.$this->exceptsList;
       $ret=str_replace(',,', ',', $ret);
+
+      $ret="select * from ".$this->tableName." where ".$this->fieldsList;
+
       return $ret;
     }
 }
@@ -76,17 +74,22 @@ function get__param($param){
 }
 
 function get__const($const){
-  return "const@".$const;
+  return constant($const);
 }
 
 function is__greater($value){
-  return "greater@".$value;
+  return " > '$value'";
 }
 
 function is__smaller($value){
-  return "smaller@".$value;
+  return " < '$value'";
 }
 
 function is__between($min, $max){
-  return "between@".$min."^".$max;
+  return " BETWEEN '$min' AND '$max' ";
+}
+
+
+function is_value($value){
+  return "='$value' ";
 }

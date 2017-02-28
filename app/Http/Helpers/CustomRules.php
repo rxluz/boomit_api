@@ -1,5 +1,5 @@
 <?php
 
-function testtetet(){
+function olamundo(){
   return "oi";
 }

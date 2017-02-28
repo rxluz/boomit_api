@@ -7,6 +7,8 @@ function setRule(){
 
   return $this;
 }
+
+
 //echo "ola mundo";
 function olamundo(){
   return "o11i";

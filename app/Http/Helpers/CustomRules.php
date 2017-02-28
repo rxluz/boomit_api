@@ -1,32 +1,53 @@
 <?php
 
 class setRuler {
+
     private $typeName;
     private $tableName;
-    private $crazyName;
-
+    private $fieldsList;
 
     public function type($typeName) {
-        $this->typeName = $typeName;
-        return $this;
+      $this->typeName = "type=".$typeName.",";
+      return $this;
     }
 
     public function table($tableName) {
-        $this->tableName = $tableName;
+        $this->tableName = "table=".$tableName.",";
         return $this;
     }
 
-    public function crazy($crazyName) {
-      //$this->crazyName=$crazyName;
-      return $crazyName;
+    public function fields($fieldsList) {
+      if(is_array($fieldsList)){
+        $x=0;
+        foreach($fieldsList as $field){
+          $this->fieldsList=
+            $this->fieldsList
+            .",field[$x]="
+            .$field["name"]
+            .",value[$x]="
+            .$field["value"];
+
+          $x++;
+        }
+      }
+        //$this->tableName = "table=".$tableName.",";
+        return $this;
     }
 
+
     public function __toString() {
-        return "type:".$this->typeName." table:".$this->tableName;
+        return $this->typeName.$this->tableName.$this->fieldsList;
     }
 }
 
 function setRule(){
-  
   return new setRuler();
+}
+
+function get__param($param){
+  return "param@".$param;
+}
+
+function get__const($const){
+  return "const@".$const;
 }

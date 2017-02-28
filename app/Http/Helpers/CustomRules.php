@@ -5,6 +5,7 @@ class setRuler {
     private $typeName;
     private $tableName;
     private $fieldsList;
+    private $exceptsList;
 
     public function type($typeName) {
       $this->typeName = "type=".$typeName.",";
@@ -30,13 +31,33 @@ class setRuler {
           $x++;
         }
       }
-        //$this->tableName = "table=".$tableName.",";
-        return $this;
+
+      return $this;
+    }
+
+    public function excepts($exceptsList) {
+      if(is_array($exceptsList)){
+        $x=0;
+        foreach($exceptsList as $except){
+          $this->$exceptsList=
+            $this->$exceptsList
+            .",expect.field[$x]="
+            .$except["name"]
+            .",except.value[$x]="
+            .$except["value"];
+
+          $x++;
+        }
+      }
+
+      return $this;
     }
 
 
     public function __toString() {
-        return $this->typeName.$this->tableName.$this->fieldsList;
+      $ret=$this->typeName.$this->tableName.$this->fieldsList.$this->fieldsList;
+      $ret=str_replace(',,', ',', $ret);
+      return $ret;
     }
 }
 

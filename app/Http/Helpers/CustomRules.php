@@ -6,6 +6,11 @@ class setRuler {
     private $tableName;
     private $fieldsList;
     private $exceptsList;
+    private $nameRule;
+
+    public function __construct($nameRule){
+      $this->nameRule=$nameRule.":";
+    }
 
     public function type($typeName) {
       $this->typeName = "type=".$typeName.",";
@@ -55,7 +60,7 @@ class setRuler {
 
 
     public function __toString() {
-      $ret=$this->typeName.$this->tableName.$this->fieldsList.$this->exceptsList;
+      $ret=$this->nameRule.$this->typeName.$this->tableName.$this->fieldsList.$this->exceptsList;
       $ret=str_replace(',,', ',', $ret);
       return $ret;
     }

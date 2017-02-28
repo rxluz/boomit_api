@@ -55,7 +55,7 @@ class setRuler {
 
 
     public function __toString() {
-      $ret=$this->typeName.$this->tableName.$this->fieldsList.$this->fieldsList;
+      $ret=$this->typeName.$this->tableName.$this->fieldsList.$this->exceptsList;
       $ret=str_replace(',,', ',', $ret);
       return $ret;
     }

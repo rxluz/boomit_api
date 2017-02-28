@@ -20,6 +20,7 @@ class HelperServiceProvider extends ServiceProvider
      */
     public function register()
     {
+      parent::boot();
       //echo "ola mundo";
       // foreach (glob(app_path().'/Helpers/*.php') as $filename){
       //   echo $filename;

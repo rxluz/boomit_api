@@ -19,7 +19,7 @@ class setRuler {
     }
 
     public function table($tableName) {
-        $this->tableName = "table=".$tableName.",";
+        $this->tableName = $tableName;
         return $this;
     }
 

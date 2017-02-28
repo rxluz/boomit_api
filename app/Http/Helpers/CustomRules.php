@@ -90,6 +90,6 @@ function is__between($min, $max){
 }
 
 
-function is_value($value){
+function is__value($value){
   return "='$value' ";
 }

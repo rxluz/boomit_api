@@ -23,12 +23,12 @@ Route::get('test/{testparam?}', function(){
     ->table("users")
     ->fields(
       [
-        ["name" => "id", "value" => is_greater(get__post("min_id"))]
+        ["name" => "id", "value" => is__greater(get__post("min_id"))]
       ]
     )
     ->excepts(
       [
-        ["name" => "active", "value" => is_value("1")]
+        ["name" => "active", "value" => is__value("1")]
       ]
     );
 });

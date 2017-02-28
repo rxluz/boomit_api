@@ -72,7 +72,7 @@ function set__rule($nameRule){
 }
 
 function get__param($param){
-  return "param@".$param;
+  return Route::current()->getParameter($param);
 }
 
 function get__const($const){

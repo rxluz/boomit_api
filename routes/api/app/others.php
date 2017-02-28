@@ -16,11 +16,11 @@ $response["200"]=function(){
 */
 
 Route::post('contacts', 'App\OthersController@storeContacts');
-Route::get('test', function(){
+Route::get('test/{testparam?}', function(){
   echo
     set__rule('namerule')
     ->type('typeanyone')
-    ->table(get__param('teste'))
+    ->table(get__param('testparam'))
     ->fields(
       [
         ["name" => is__between(0, 50), "value" => get__const('value1')],

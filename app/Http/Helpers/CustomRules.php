@@ -27,6 +27,6 @@ class setRuler {
 }
 
 function setRule(){
-  $setRule=new setRule();
-  return $setRule;
+  
+  return new setRuler();
 }

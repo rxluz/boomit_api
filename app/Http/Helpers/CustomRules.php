@@ -1,6 +1,13 @@
 <?php
 
+function setRule(){
+  $this->test=function(){
+    echo "ola teste";
+  }
+
+  return $this;
+}
 //echo "ola mundo";
 function olamundo(){
-  return "oi";
+  return "o11i";
 }

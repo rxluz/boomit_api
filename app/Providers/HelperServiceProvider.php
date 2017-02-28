@@ -20,9 +20,10 @@ class HelperServiceProvider extends ServiceProvider
      */
     public function register()
     {
-      foreach (glob(app_path().'/Helpers/*.php') as $filename){
-        echo $filename;
-          //require_once($filename);
-      }
+      echo "ola mundo";
+      // foreach (glob(app_path().'/Helpers/*.php') as $filename){
+      //   echo $filename;
+      //     //require_once($filename);
+      // }
     }
 }

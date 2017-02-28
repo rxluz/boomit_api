@@ -27,5 +27,10 @@ Route::get('test', function(){
         ["name" => "test1", "value" => get__const('value2')],
         ["name" => "test1", "value" => get__const('value3')]
       ]
+    )
+    ->excepts(
+      [
+        ["name" => "excepttest", "value" => get__const('exceptvalue1')],
+      ]
     );
 });

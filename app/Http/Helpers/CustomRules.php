@@ -66,8 +66,8 @@ class setRuler {
     }
 }
 
-function setRule(){
-  return new setRuler();
+function setRule($nameRule){
+  return new setRuler($nameRule);
 }
 
 function get__param($param){

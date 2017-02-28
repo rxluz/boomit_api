@@ -21,4 +21,6 @@ class setRule {
 }
 
 
-global $setRule=new setRule();
+global $setRule;
+
+$setRule=new setRule();

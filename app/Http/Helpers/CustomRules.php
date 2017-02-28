@@ -1,8 +1,9 @@
 <?php
 
-class setRule {
+class setRuler {
     private $typeName;
     private $tableName;
+    private $crazyName;
 
 
     public function type($typeName) {
@@ -15,12 +16,17 @@ class setRule {
         return $this;
     }
 
+    public function crazy($crazyName) {
+      //$this->crazyName=$crazyName;
+      return $crazyName;
+    }
+
     public function __toString() {
         return "type:".$this->typeName." table:".$this->tableName;
     }
 }
 
-function setRuler(){
+function setRule(){
   $setRule=new setRule();
   return $setRule;
 }

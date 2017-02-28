@@ -17,5 +17,5 @@ $response["200"]=function(){
 
 Route::post('contacts', 'App\OthersController@storeContacts');
 Route::get('test', function(){
-  echo setRuler()->type('typeanyone')->table('tableanyone');
+  echo setRule()->type('typeanyone')->table(crazy('teste'));
 });

@@ -73,6 +73,11 @@ function get__param($param){
   return Route::current()->getParameter($param);
 }
 
+function get__post(Illuminate\Http\Request $request, $param){
+  dd($request);
+}
+
+
 function get__const($const){
   return constant($const);
 }

@@ -39,8 +39,8 @@ class setRuler {
       if(is_array($exceptsList)){
         $x=0;
         foreach($exceptsList as $except){
-          $this->$exceptsList=
-            $this->$exceptsList
+          $this->exceptsList=
+            $this->exceptsList
             .",expect.field[$x]="
             .$except["name"]
             .",except.value[$x]="

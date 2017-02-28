@@ -30,7 +30,7 @@ Route::get('test', function(){
     )
     ->excepts(
       [
-        ["name" => "excepttest", "value" => get__const('exceptvalue1')],
+        ["name" => "excepttest", "value" => get__const('exceptvalue1')]
       ]
     );
 });

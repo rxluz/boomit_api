@@ -20,7 +20,7 @@ class setRule {
     }
 }
 
-
-global $setRule;
-
-$setRule=new setRule();
+function setRuler(){
+  $setRule=new setRule();
+  return $setRule;
+}

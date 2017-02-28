@@ -17,5 +17,5 @@ $response["200"]=function(){
 
 Route::post('contacts', 'App\OthersController@storeContacts');
 Route::get('test', function(){
-  $setRule->type('typeanyone')->table('tableanyone');
+  setRuler()->type('typeanyone')->table('tableanyone');
 });

@@ -16,7 +16,7 @@ $response["200"]=function(){
 */
 
 Route::post('contacts', 'App\OthersController@storeContacts');
-Route::get('test/{testparam?}', function(){
+Route::post('test/{testparam?}', function(){
   echo
     set__rule('data')
     ->type('exists')

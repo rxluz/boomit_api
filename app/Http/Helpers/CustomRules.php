@@ -28,9 +28,9 @@ class setRuler {
         foreach($fieldsList as $field){
           $this->fieldsList=
             $this->fieldsList
-            .",field[$x]="
+            .",field.$x="
             .$field["name"]
-            .",value[$x]="
+            .",value.$x="
             .$field["value"];
 
           $x++;
@@ -46,9 +46,9 @@ class setRuler {
         foreach($exceptsList as $except){
           $this->exceptsList=
             $this->exceptsList
-            .",expect.field[$x]="
+            .",expect.field.$x="
             .$except["name"]
-            .",except.value[$x]="
+            .",except.value.$x="
             .$except["value"];
 
           $x++;
@@ -66,7 +66,7 @@ class setRuler {
     }
 }
 
-function setRule($nameRule){
+function set__rule($nameRule){
   return new setRuler($nameRule);
 }
 

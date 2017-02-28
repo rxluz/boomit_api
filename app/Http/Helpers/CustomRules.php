@@ -1,11 +1,11 @@
 <?php
 
 function setRule(){
-  $this->test=function(){
+  function test(){
     echo "ola teste";
   }
 
-  return $this;
+  return true;
 }
 
 

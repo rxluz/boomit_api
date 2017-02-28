@@ -1,15 +1,24 @@
 <?php
 
-function setRule(){
-  function test(){
-    echo "ola teste";
-  }
+class setRule {
+    private $typeName;
+    private $tableName;
 
-  return true;
+
+    public function type($typeName) {
+        $this->typeName = $typeName;
+        return $this;
+    }
+
+    public function table($tableName) {
+        $this->tableName = $tableName;
+        return $this;
+    }
+
+    public function __toString() {
+        return "type:".$this->typeName." table:".$this->tableName;
+    }
 }
 
 
-//echo "ola mundo";
-function olamundo(){
-  return "o11i";
-}
+$setRule=new SetRule();

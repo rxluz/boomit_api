@@ -77,3 +77,15 @@ function get__param($param){
 function get__const($const){
   return "const@".$const;
 }
+
+function is__greater($value){
+  return "greater@".$value;
+}
+
+function is__smaller($value){
+  return "smaller@".$value;
+}
+
+function is__between($min, $max){
+  return "between@".$min."^".$max;
+}

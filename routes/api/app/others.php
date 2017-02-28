@@ -23,14 +23,14 @@ Route::get('test', function(){
     ->table(get__param('teste'))
     ->fields(
       [
-        ["name" => "test", "value" => get__const('value1')],
-        ["name" => "test1", "value" => get__const('value2')],
+        ["name" => is__between(0, 50), "value" => get__const('value1')],
+        ["name" => is__smaller(get__const('value3')), "value" => get__const('value2')],
         ["name" => "test1", "value" => get__const('value3')]
       ]
     )
     ->excepts(
       [
-        ["name" => "excepttest", "value" => get__const('exceptvalue1')]
+        ["name" => is__greater("450"), "value" => get__const('exceptvalue1')]
       ]
     );
 });

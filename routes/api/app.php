@@ -22,25 +22,6 @@ Route::group(['prefix' => 'v1'], function () {
     return response("", 200);
   };
 
-  Route::group([
-      'prefix' => 'user',
-  ], function ($router) {
-      require base_path('routes/api/app/user.php');
-  });
-
-  Route::group([
-      'prefix' => 'petshops',
-  ], function ($router) {
-      require base_path('routes/api/app/petshops.php');
-  });
-
-
-  Route::group([
-      'prefix' => 'orders',
-  ], function ($router) {
-      require base_path('routes/api/app/orders.php');
-  });
-
 
   Route::group([
       'prefix' => 'others',

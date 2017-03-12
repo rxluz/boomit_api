@@ -17,9 +17,8 @@ $response["200"]=function(){
 
 Route::post('contacts', 'App\OthersController@storeContacts');
 
-Route::post('shell_quiz', function(){
-  return response('olar mundo', 200);
-});
+Route::post('shell_quiz', 'App\OthersController@storeShellQuiz');
+Route::patch('shell_quiz', 'App\OthersController@updateShellQuiz');
 
 // Route::post('test/{testparam?}', function(){
 //   echo

@@ -36,6 +36,13 @@ class OthersController extends Controller
     return response('', 200);
   }
 
+  public function storeShellQuiz(OthersRequest $request){
+    return response('ola mundo', 200);
+  }
+
+  public function updateShellQuiz(OthersRequest $request){
+    return response('ola mundo', 200);
+  }
 
 
 }

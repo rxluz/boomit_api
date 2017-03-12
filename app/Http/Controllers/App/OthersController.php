@@ -37,10 +37,10 @@ class OthersController extends Controller
   }
 
   public function storeShellQuiz(OthersRequest $request){
-    return response('ola mundo', 200);
+    return response(['id'=>rand(0, 1000)], 200);
   }
 
-  public function updateShellQuiz(OthersRequest $request){
+  public function updateShellQuiz(OthersRequest $request, $id){
     return response('ola mundo', 200);
   }
 

@@ -39,7 +39,8 @@ class ShellSuccess extends Mailable
             ->subject('Teste')
             ->view('shell')
             ->with([
-              'e1' => $this->get_e1()
+                'e1' => $this->get_e1()
+              , 'e2' => $this->get_e2()
             ]);
         //return $this->view('view.name');
     }

@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => 'hello@example.com',
-        'name' => 'Example',
+        'address' => 'postmaster@sandbox1e6dc78a895044c8ad741951f1e4d6a9.mailgun.org',
+        'name' => 'Equipe Shell',
     ],
 
     /*

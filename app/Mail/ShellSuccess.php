@@ -44,6 +44,91 @@ class ShellSuccess extends Mailable
         //return $this->view('view.name');
     }
 
+    public function get_e2(){
+      return [
+          'e2_competencias' =>  [
+                'name' => 'Escolha as três Competências em que você se sente mais capacitado. Elas serão as suas FORÇAS:'
+              , 'value' => $this->shell_quiz->e2_competencias //ok
+          ]
+          'e2_fragilidades' =>  [
+                'name' => 'Agora, escolha as três Competências em que você tem mais dificuldade. Elas serão as suas FRAGILIDADES:'
+              , 'value' => $this->shell_quiz->e2_fragilidades //ok
+          ]
+        , 'e2_melhor_forca' =>  [
+              'name' => 'Qual das suas três FORÇAS é a mais desenvolvida?'
+            , 'value' => $this->shell_quiz->e2_melhor_forca //ok
+          ]
+        , 'e2_pior_fragilidade' =>  [
+              'name' => 'Qual das suas três FRAGILIDADES é a menos desenvolvida?'
+            , 'value' => $this->shell_quiz->e2_pior_fragilidade //ok
+          ]
+        , 'e2_forca_parceiros' =>  [
+              'name' => 'Qual foi a sua maior FORÇA, segundo seus parceiros?'
+            , 'value' => $this->shell_quiz->e2_forca_parceiros //ok
+          ]
+        , 'e2_corresponde_forca' =>  [
+              'name' => 'Ela corresponde à sua escolha?'
+            , 'value' => $this->shell_quiz->e2_corresponde_forca //ok
+          ]
+        , 'e2_mantem_forca' =>  [
+              'name' => 'Você mantém sua escolha original, ou quer trocar?'
+            , 'value' => $this->shell_quiz->e2_mantem_forca //ok
+          ]
+        , 'e2_forcas_final' => [
+              'name' => 'Escolha de forças final:'
+            , 'value' => $this->shell_quiz->e2_forcas_final //ok
+          ]
+        , 'e2_fragilidade_parceiros' =>  [
+              "value" => $this->shell_quiz->e2_fragilidade_parceiros
+            , "name" => "Qual foi a sua pior FRAGILIDADE, segundo seus parceiros?"
+          ]
+        , 'e2_corresponde_fragilidade' =>  [
+            "value" => $this->shell_quiz->e2_corresponde_fragilidade,
+            "name" => "Ela corresponde à sua escolha?"
+          ]
+        , 'e2_mantem_fragilidade' =>  [
+              "name" => "Você mantém sua escolha original, ou quer trocar?"
+            , "value" => $this->shell_quiz->e2_mantem_fragilidade //ok
+          ]
+        , 'e2_fragilidades_final' =>  [
+              "name" => "Escolha de fragilidades final:"
+            , "value" => $this->shell_quiz->e2_fragilidades_final //ok
+          ]
+        , 'e2_forca_fragilidade' =>  [
+              "value" => $this->shell_quiz->e2_forca_fragilidade
+            , "name" => "Durante o Desafio, você pôde trabalhar algumas das suas Competências. Você deu prioridade a usar suas FORÇAS ou a explorar suas FRAGILIDADES?"
+
+          ]
+        , 'e2_justificativa_forca_fragilidade' =>  [
+              "value" => $this->shell_quiz->e2_justificativa_forca_fragilidade
+            , "name" => "Justifique sua escolha apontada na pergunta anterior."
+          ]
+        , 'e2_forca_1' =>  [
+              "value" => $this->shell_quiz->e2_forca_1
+            , "name" => "Força 1:"
+          ]
+        , 'e2_forca_2' =>  [
+              "value" => $this->shell_quiz->e2_forca_2
+            , "name" => "Força 2:"
+          ]
+        , 'e2_forca_3' =>  [
+              "value" => $this->shell_quiz->e2_forca_3
+            , "name" => "Força 3:"
+          ]
+        , 'e2_fragilidade_1' =>  [
+              "value" => $this->shell_quiz->e2_fragilidade_1
+            , "name" => "Fragilidade 1:"
+          ]
+        , 'e2_fragilidade_2' =>  [
+              "value" => $this->shell_quiz->e2_fragilidade_2
+            , "name" => "Fragilidade 2:"
+          ]
+        , 'e2_fragilidade_3' =>  [
+              "value" => $this->shell_quiz->e2_fragilidade_3
+            , "name" => "Fragilidade 3:"
+          ]
+      ];
+    }
 
     public function get_e1(){
       return [

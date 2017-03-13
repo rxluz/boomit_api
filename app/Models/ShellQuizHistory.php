@@ -83,6 +83,9 @@ use Illuminate\Database\Eloquent\Model;
   }
 
 
+
+
+
   protected function getE1MoraComAttribute($value){
     $values=json_decode($value);
 
@@ -95,6 +98,87 @@ use Illuminate\Database\Eloquent\Model;
     $value=isset($newvalue) ? $newvalue."." : $value;
 
     return str_replace(",.", "", $value);
+  }
+
+  protected function getE2CompetenciasAttribute($value){
+    $values=json_decode($value);
+
+
+    foreach($values as $v){
+      $newvalue=$newvalue ?? "";
+      $newvalue=$newvalue.$this->competencias($v).",";
+    }
+
+    $value=isset($newvalue) ? $newvalue."." : $value;
+
+    return str_replace(",.", "", $value);
+  }
+
+  protected function getE2FragilidadesAttribute($value){
+    $values=json_decode($value);
+
+
+    foreach($values as $v){
+      $newvalue=$newvalue ?? "";
+      $newvalue=$newvalue.$this->competencias($v).",";
+    }
+
+    $value=isset($newvalue) ? $newvalue."." : $value;
+
+    return str_replace(",.", "", $value);
+  }
+
+
+  protected function getE2MelhorForcaAttribute($value){
+    return $this->competencias($value);
+  }
+
+
+  protected function getE2PiorFragilidadeAttribute($value){
+    return $this->competencias($value);
+  }
+
+
+  protected function competencias($value){
+    switch(strtolower($value)){
+      case 'a':
+        return 'Modelo de Negócios';
+      break;
+
+      case 'b':
+        return 'Pesquisa de Mercado';
+      break;
+
+      case 'c':
+        return 'Planejamento Estratégico';
+      break;
+
+      case 'd':
+        return 'Planejamento Financeiro';
+      break;
+
+      case 'e':
+        return 'Marketing';
+      break;
+
+      case 'f':
+        return 'Legislação';
+      break;
+
+      case 'g':
+        return 'Gestão de Pessoas';
+      break;
+
+      case 'h':
+        return 'Gestão Operacional';
+      break;
+
+      case 'i':
+        return 'Resposabilidade Social';
+      break;
+
+    }
+    return "NA";
   }
 
   protected function moraCom($value){

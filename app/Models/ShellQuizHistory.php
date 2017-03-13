@@ -61,5 +61,9 @@ use Illuminate\Database\Eloquent\Model;
 
   protected $hidden = [''];
 
+  protected getE1GrauEscolaridadeAttribute($value){
+    return "oi ".$value;
+  }
+
 
 }

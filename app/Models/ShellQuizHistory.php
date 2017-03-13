@@ -155,7 +155,7 @@ use Illuminate\Database\Eloquent\Model;
     return "NA";
   }
 
-  protected function getE1EstagioNegocioAttribute($value){
+  protected function getE1AvaliaResultadosAttribute($value){
     switch(strtolower($value)){
       case 'a':
         return 'Estou tomando muito prejuízo, e pensando em desistir';

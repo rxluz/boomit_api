@@ -30,6 +30,7 @@ class ShellSuccess extends Mailable
     public function build()
     {
       return $this->from('postmaster@sandbox1e6dc78a895044c8ad741951f1e4d6a9.mailgun.org')
+            ->subject('Teste')
             ->view('shell');
         //return $this->view('view.name');
     }

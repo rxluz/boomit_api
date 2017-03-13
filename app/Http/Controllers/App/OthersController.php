@@ -85,7 +85,7 @@ class OthersController extends Controller
       , 'e2_fragilidade_3' => $request->e2_fragilidade_3 //ok
       , 'e3_como_entrei' => $request->e3_como_entrei //ok
       , 'e3_como_saio' => $request->e3_como_saio //ok
-      ]);
+    ]);
 
     $shell_quiz_data->save();
     $this->storeShellQuizHistory($request);

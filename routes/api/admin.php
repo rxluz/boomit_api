@@ -17,38 +17,38 @@
 
 
 
-Route::group(['prefix' => 'v1'], function () {
-
-  $response["200"]=function(){
-    return response("", 200);
-  };
-
-  // Route::group([
-  //     'prefix' => 'users',
-  // ], function ($router) {
-  //     require base_path('routes/api/admin/users.php');
-  // });
-  //
-  //
-  // Route::group([
-  //     'prefix' => 'categories',
-  // ], function ($router) {
-  //     require base_path('routes/api/admin/categories.php');
-  // });
-  //
-  //
-  //
-  // Route::group([
-  //     'prefix' => 'orders',
-  // ], function ($router) {
-  //     require base_path('routes/api/admin/orders.php');
-  // });
-  //
-  //
-  // Route::group([
-  //     'prefix' => 'petshops',
-  // ], function ($router) {
-  //     require base_path('routes/api/admin/petshops.php');
-  // });
-
-});
+// Route::group(['prefix' => 'v1'], function () {
+//
+//   $response["200"]=function(){
+//     return response("", 200);
+//   };
+//
+//   // Route::group([
+//   //     'prefix' => 'users',
+//   // ], function ($router) {
+//   //     require base_path('routes/api/admin/users.php');
+//   // });
+//   //
+//   //
+//   // Route::group([
+//   //     'prefix' => 'categories',
+//   // ], function ($router) {
+//   //     require base_path('routes/api/admin/categories.php');
+//   // });
+//   //
+//   //
+//   //
+//   // Route::group([
+//   //     'prefix' => 'orders',
+//   // ], function ($router) {
+//   //     require base_path('routes/api/admin/orders.php');
+//   // });
+//   //
+//   //
+//   // Route::group([
+//   //     'prefix' => 'petshops',
+//   // ], function ($router) {
+//   //     require base_path('routes/api/admin/petshops.php');
+//   // });
+//
+// });

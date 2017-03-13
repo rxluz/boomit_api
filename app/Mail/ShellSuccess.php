@@ -47,22 +47,71 @@ class ShellSuccess extends Mailable
 
     public function get_e1(){
       return [
-          'e1_nome_completo' =>  $this->shell_quiz->e1_nome_completo //ok
-        , 'e1_email' =>  $this->shell_quiz->e1_email //ok
-        , 'e1_data_nascimento' =>  $this->shell_quiz->e1_data_nascimento //ok
-        , 'e1_seu_proposito' =>  $this->shell_quiz->e1_seu_proposito //ok
-        , 'e1_grau_escolaridade' =>  $this->shell_quiz->e1_grau_escolaridade //ok
-        , 'e1_hoje_esta' =>  $this->shell_quiz->e1_hoje_esta //ok
-        , 'e1_mora_com' =>  $this->shell_quiz->e1_mora_com //ok
-        , 'e1_sobre_renda' =>  $this->shell_quiz->e1_sobre_renda //ok
-        , 'e1_estagio_negocio' =>  $this->shell_quiz->e1_estagio_negocio //ok
-        , 'e1_tempo_dia' =>  $this->shell_quiz->e1_tempo_dia //ok
-        , 'e1_avalia_resultados' =>  $this->shell_quiz->e1_avalia_resultados //ok
-        , 'e1_apoio_familiar' =>  $this->shell_quiz->e1_apoio_familiar //ok
-        , 'e1_ideal_negocio' =>  $this->shell_quiz->e1_ideal_negocio //ok
-        , 'e1_fracassou_antes' =>  $this->shell_quiz->e1_fracassou_antes //ok
-        , 'e1_tempo_objetivo' =>  $this->shell_quiz->e1_tempo_objetivo //ok
-        , 'e1_proposito_detalhado' =>  $this->shell_quiz->e1_proposito_detalhado //ok
+          'e1_nome_completo' =>  [
+                'name' => 'Nome completo:'
+              , 'value' => $this->shell_quiz->e1_nome_completo //ok
+          ]
+        , 'e1_email' =>  [
+              'name' => 'Email'
+            , 'value' => $this->shell_quiz->e1_email //ok
+          ]
+        , 'e1_data_nascimento' =>  [
+              'name' => 'Data de nascimento:'
+            , 'value' => $this->shell_quiz->e1_data_nascimento //ok
+          ]
+        , 'e1_seu_proposito' =>  [
+              'name' => 'Seu propósito:'
+            , 'value' => $this->shell_quiz->e1_seu_proposito //ok
+          ]
+        , 'e1_grau_escolaridade' =>  [
+              'name' => 'Grau de escolaridade:'
+            , 'value' => $this->shell_quiz->e1_grau_escolaridade //ok
+          ]
+        , 'e1_hoje_esta' =>  [
+              'name' => 'Hoje você está:'
+            , 'value' => $this->shell_quiz->e1_hoje_esta //ok
+          ]
+        , 'e1_mora_com' => [
+              'name' => 'Mora com:'
+            , 'value' => $this->shell_quiz->e1_mora_com //ok
+          ]
+        , 'e1_sobre_renda' =>  [
+              "value" => $this->shell_quiz->e1_sobre_renda
+            , "name" => "Sobre a renda da sua residência:"
+          ]
+        , 'e1_estagio_negocio' =>  [
+            "value" => $this->shell_quiz->e1_estagio_negocio,
+            "name" => "Seu negócio está em que estágio?"
+          ]
+        , 'e1_tempo_dia' =>  [
+              "name" => "Quanto tempo do seu dia se dedica ao seu negócio ou ideia de negócio?"
+            , "value" => $this->shell_quiz->e1_tempo_dia //ok
+          ]
+        , 'e1_avalia_resultados' =>  [
+              "name" => "Como você avalia os resultados financeiros do seu negócio?"
+            , "value" => $this->shell_quiz->e1_avalia_resultados //ok
+          ]
+        , 'e1_apoio_familiar' =>  [
+              "value" => $this->shell_quiz->e1_apoio_familiar
+            , "name" => "Você tem apoio de familiares para desenvolver o seu negócio?"
+
+          ]
+        , 'e1_ideal_negocio' =>  [
+              "value" => $this->shell_quiz->e1_ideal_negocio
+            , "name" => "Em termos de ideal, o que descreve melhor o seu negócio para você?"
+          ]
+        , 'e1_fracassou_antes' =>  [
+              "value" => $this->shell_quiz->e1_fracassou_antes
+            , "name" => "Você já fracassou antes?"
+          ]
+        , 'e1_tempo_objetivo' =>  [
+              "value" => $this->shell_quiz->e1_tempo_objetivo
+            , "name" => "Daquilo que espera com o seu negócio, em quanto tempo acha que atingirá seu objetivo?"
+          ]
+        , 'e1_proposito_detalhado' =>  [
+              "value" => $this->shell_quiz->e1_proposito_detalhado
+            , "name" => "Reescreva seu Propósito mais detalhadamente, associando-o melhor ao seu negócio ou ideia de negocio:"
+          ]
       ];
     }
 }

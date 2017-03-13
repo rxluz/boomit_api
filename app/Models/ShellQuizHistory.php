@@ -83,6 +83,36 @@ use Illuminate\Database\Eloquent\Model;
   }
 
 
+  protected function getE1MoraComAttribute($value){
+    $values=json_decode($value);
+    foreach($values as $v){
+      $value=$this->moraCom($v).",";
+    }
+
+    return $value;
+  }
+
+  protected function moraCom($value){
+    switch(strtolower($value)){
+      case 'a':
+        return 'Desempregado';
+      break;
+
+      case 'b':
+        return 'Com um emprego';
+      break;
+
+      case 'c':
+        return 'Apenas com meu negócio, já funcionando';
+      break;
+
+      case 'd':
+        return 'Com um emprego e com o meu negócio';
+      break;
+    }
+    return "NA";
+  }
+
   protected function getE1SobreRendaAttribute($value){
     switch(strtolower($value)){
       case 'a':

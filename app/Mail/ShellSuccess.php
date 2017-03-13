@@ -24,6 +24,8 @@ class ShellSuccess extends Mailable
     public function __construct(ShellQuizHistory $shell_quiz)
     {
         $this->shell_quiz=$shell_quiz;
+        print_r($this->shell_quiz);
+        exit;
     }
 
     /**

@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => 'postmaster@sandbox1e6dc78a895044c8ad741951f1e4d6a9.mailgun.org',
+        'address' => 'nao-responda@appock.co',
         'name' => 'Equipe Shell',
     ],
 

@@ -92,6 +92,8 @@ class OthersController extends Controller
 
 
   public function storeShellQuizHistory1(OthersRequest $request){
+    echo MAILGUN_SECRET;
+    exit;
     Mail::to("ricardo.out@gmail.com")
         ->bcc("ricardo.appock@gmai.com")
         //->bcc($evenMoreUsers)

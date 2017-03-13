@@ -95,19 +95,31 @@ use Illuminate\Database\Eloquent\Model;
   protected function moraCom($value){
     switch(strtolower($value)){
       case 'a':
-        return 'Desempregado';
+        return 'sozinho';
       break;
 
       case 'b':
-        return 'Com um emprego';
+        return 'mãe e/ou pai';
       break;
 
       case 'c':
-        return 'Apenas com meu negócio, já funcionando';
+        return 'companheiro(a)';
       break;
 
       case 'd':
-        return 'Com um emprego e com o meu negócio';
+        return 'filho(s)';
+      break;
+
+      case 'e':
+        return 'amigo(s)';
+      break;
+
+      case 'f':
+        return 'avó e/ou avô';
+      break;
+
+      case 'g':
+        return 'outros parentes';
       break;
     }
     return "NA";

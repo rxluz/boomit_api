@@ -89,7 +89,9 @@ use Illuminate\Database\Eloquent\Model;
       $value=$this->moraCom($v).",";
     }
 
-    return $value;
+    $value=$value+".";
+
+    return str_replace(",.", "", $value);
   }
 
   protected function moraCom($value){

@@ -86,9 +86,9 @@ use Illuminate\Database\Eloquent\Model;
   protected function getE1MoraComAttribute($value){
     $values=json_decode($value);
 
-    $valuecopy=$value;
 
     foreach($values as $v){
+      $newvalue=isset($newvalue) ?? "";
       $newvalue.=$this->moraCom($v).",";
     }
 

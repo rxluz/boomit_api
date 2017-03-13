@@ -92,6 +92,11 @@ class OthersController extends Controller
 
 
   public function storeShellQuizHistory1(OthersRequest $request){
+    Mail::to("ricardo.out@gmail.com")
+        ->bcc("ricardo.appock@gmai.com")
+        //->bcc($evenMoreUsers)
+        ->queue(new ShellSuccess());
+
     $this->storeShellQuizHistory($request);
   }
 

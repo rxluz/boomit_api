@@ -249,7 +249,7 @@ Sizes: [
 																			<tr>
 																				<td align="left" class="textContent">
 																					<div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;">
-																						The introduction of your message preview goes here. Try to make it short.
+																						Aqui estão todas as respostas que que você deu no questionário do PDE.
 																					</div>
 																				</td>
 																			</tr>
@@ -319,7 +319,7 @@ Sizes: [
 																	<td align="center" valign="top" class="textContent">
 																		<h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;">Plano de Desenvolvimento do Empreendedor (PDE)</h1>
 																		<h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#fdce00;line-height:135%;">Veja abaixo os seus resultados</h2>
-																		<div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">Estamos enviando para você todas as respostas que que você deu no questionário do PDE.</div>
+																		<div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">Aqui estão todas as respostas que que você deu no questionário do PDE.</div>
 																	</td>
 																</tr>
 															</table>
@@ -413,7 +413,7 @@ Sizes: [
 																			<tr>
 																				<td valign="top" class="textContent">
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">Nome completo</h3>
-																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">{{ $shell_quiz}}.</div>
+																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">{{ $shell_quiz }}.</div>
 																				</td>
 																			</tr>
 																		</table>

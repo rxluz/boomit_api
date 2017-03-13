@@ -11,7 +11,8 @@
         "jrm2k6/cloudder": "0.3.*",
         "barryvdh/laravel-cors": "^0.8.2",
 	"joshtronic/php-googleplaces": "dev-master",
-        "mpociot/laravel-apidoc-generator": "1.6.6"
+        "mpociot/laravel-apidoc-generator": "1.6.6",
+        "guzzlehttp/guzzle": "^6.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

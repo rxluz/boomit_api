@@ -68,7 +68,7 @@ class OthersRequest extends ValidateRequest
       , 'e1_seu_proposito' => ['max:400'] //ok
       , 'e1_grau_escolaridade' => [] //ok
       , 'e1_hoje_esta' => [] //ok
-      , 'e1_mora_com' => ['json'] //ok
+      , 'e1_mora_com' => [] //ok
       , 'e1_sobre_renda' => [] //ok
       , 'e1_estagio_negocio' => [] //ok
       , 'e1_tempo_dia' => []  //ok
@@ -78,20 +78,20 @@ class OthersRequest extends ValidateRequest
       , 'e1_fracassou_antes' => [] //ok
       , 'e1_tempo_objetivo' => [] //ok
       , 'e1_proposito_detalhado' => ['max:1500'] //ok
-      , 'e2_competencias' => ['json'] //ok
-      , 'e2_fragilidades' => ['json'] //ok
+      , 'e2_competencias' => [] //ok
+      , 'e2_fragilidades' => [] //ok
       , 'e2_melhor_forca' => [] //ok
       , 'e2_pior_fragilidade' => [] //ok
 
       , 'e2_forca_parceiros' => []  //ok
       , 'e2_corresponde_forca' => [] //ok
       , 'e2_mantem_forca' => [] //?
-      , 'e2_forcas_final' => ['json'] //ok
+      , 'e2_forcas_final' => [] //ok
 
-      , 'e2_fragilidade_parceiros' => ['json'] //
-      , 'e2_corresponde_fragilidade' => ['json']
+      , 'e2_fragilidade_parceiros' => [] //
+      , 'e2_corresponde_fragilidade' => []
       , 'e2_mantem_fragilidade' => []
-      , 'e2_fragilidades_final' => ['json']
+      , 'e2_fragilidades_final' => []
 
 
       , 'e2_forca_fragilidade' => [] //ok

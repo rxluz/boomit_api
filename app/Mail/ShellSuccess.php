@@ -63,6 +63,6 @@ class ShellSuccess extends Mailable
         , 'e1_fracassou_antes' =>  $this->shell_quiz->e1_fracassou_antes //ok
         , 'e1_tempo_objetivo' =>  $this->shell_quiz->e1_tempo_objetivo //ok
         , 'e1_proposito_detalhado' =>  $this->shell_quiz->e1_proposito_detalhado //ok
-      ]
+      ];
     }
 }

@@ -50,7 +50,8 @@ class ShellSuccess extends Mailable
                 'name' => 'Escolha as três Competências em que você se sente mais capacitado. Elas serão as suas FORÇAS:'
               , 'value' => $this->shell_quiz->e2_competencias //ok
           ]
-          'e2_fragilidades' =>  [
+
+        , 'e2_fragilidades' =>  [
                 'name' => 'Agora, escolha as três Competências em que você tem mais dificuldade. Elas serão as suas FRAGILIDADES:'
               , 'value' => $this->shell_quiz->e2_fragilidades //ok
           ]

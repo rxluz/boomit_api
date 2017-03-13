@@ -30,7 +30,7 @@ class ShellSuccess extends Mailable
     public function build()
     {
       return $this->from('rx@appock.co')
-            ->view('welcome');
+            ->view('shell');
         //return $this->view('view.name');
     }
 }

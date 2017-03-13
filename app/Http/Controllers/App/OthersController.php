@@ -5,10 +5,10 @@ namespace App\Http\Controllers\App;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use \App\Http\Requests\App\OthersRequest;
-use JWTAuth;
-use Tymon\JWTAuth\Exceptions\JWTException;
-use \JD\Cloudder\Facades\Cloudder;
-use Hash;
+//use JWTAuth;
+//use Tymon\JWTAuth\Exceptions\JWTException;
+//use \JD\Cloudder\Facades\Cloudder;
+//use Hash;
 
 
 /**

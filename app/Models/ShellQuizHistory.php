@@ -87,10 +87,10 @@ use Illuminate\Database\Eloquent\Model;
     $values=json_decode($value);
 
     foreach($values as $v){
-      $value=$value.$this->moraCom($v).",";
+      $newvalue=$value.$this->moraCom($v).",";
     }
 
-    $value=$value.".";
+    $value=isset($newvalue) ? $newvalue."." : $value;
 
     return str_replace(",.", "", $value);
   }

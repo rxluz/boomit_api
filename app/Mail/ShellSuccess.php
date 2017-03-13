@@ -37,7 +37,10 @@ class ShellSuccess extends Mailable
     {
       return $this->from('nao-responda@appock.co')
             ->subject('Teste')
-            ->view('shell');
+            ->view('shell')
+            ->with([
+              'shell' => $this->shell_quiz
+            ]);
         //return $this->view('view.name');
     }
 }

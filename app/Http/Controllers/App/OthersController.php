@@ -88,11 +88,11 @@ class OthersController extends Controller
       ]);
 
     $shell_quiz_data->save();
-    $this->storeShellQuizHistory();
+    $this->storeShellQuizHistory($request);
     return response($shell_quiz_data, 200);
   }
 
-  public function storeShellQuizHistory(OthersRequest $request){
+  public function storeShellQuizHistory($request){
     $shell_quiz_history_data=new \App\Models\ShellQuizHistory([
         'e1_nome_completo' => $request->e1_nome_completo //ok
       , 'e1_email' => $request->e1_email //ok
@@ -180,7 +180,7 @@ class OthersController extends Controller
     $shell_quiz->e3_como_entrei=$request->e3_como_entrei ?? $shell_quiz->e3_como_entrei; //ok
     $shell_quiz->e3_como_saio=$request->e3_como_saio ?? $shell_quiz->e3_como_saio; //ok
 
-    $this->storeShellQuizHistory();
+    $this->storeShellQuizHistory($request);
 
     $shell_quiz->save();
 

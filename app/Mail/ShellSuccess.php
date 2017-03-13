@@ -8,18 +8,22 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 //use Illuminate\Support\Facades\Blade;
 
+use App\Models\ShellQuizHistory;
+
+
 class ShellSuccess extends Mailable
 {
     use Queueable, SerializesModels;
 
+    protected $shell_quiz;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(ShellQuizHistory $shell_quiz)
     {
-        //
+        $this->shell_quiz=$shell_quiz;
     }
 
     /**

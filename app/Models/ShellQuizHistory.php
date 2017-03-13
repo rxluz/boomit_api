@@ -62,7 +62,7 @@ use Illuminate\Database\Eloquent\Model;
   protected $hidden = [''];
 
   protected function getE1GrauEscolaridadeAttribute($value){
-    switch($value){
+    switch(strtolower($value)){
       case 'a':
         return 'Desempregado';
       break;

@@ -129,6 +129,13 @@ use Illuminate\Database\Eloquent\Model;
   }
 
 
+  protected function getE2ForcaParceirosAttribute($value){
+    return $this->competencias($value);
+  }
+  protected function getE2FragilidadeParceirosAttribute($value){
+    return $this->competencias($value);
+  }
+
   protected function getE2MelhorForcaAttribute($value){
     return $this->competencias($value);
   }

@@ -104,7 +104,7 @@ use Illuminate\Database\Eloquent\Model;
     $values=json_decode($value);
 
 
-    foreach($values as $v){
+   foreach($values as $v){
       $newvalue=$newvalue ?? "";
       $newvalue=$newvalue.$this->competencias($v).",";
     }

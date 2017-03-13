@@ -132,7 +132,7 @@ class OthersController extends Controller
     $shell_quiz->e3_como_saio=$request->e3_como_saio ?? $shell_quiz->e3_como_saio; //ok
 
 
-    $shell_quiz->save()
+    $shell_quiz->save();
 
     return response($shell_quiz, 200);
   }

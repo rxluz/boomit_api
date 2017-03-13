@@ -83,4 +83,165 @@ use Illuminate\Database\Eloquent\Model;
   }
 
 
+  protected function getE1SobreRendaAttribute($value){
+    switch(strtolower($value)){
+      case 'a':
+        return 'Não contribuo';
+      break;
+
+      case 'b':
+        return 'Apenas pago minhas contas pessoais';
+      break;
+
+      case 'c':
+        return 'Contribuo, mas pouco';
+      break;
+
+      case 'd':
+        return 'Contribuo muito';
+      break;
+
+      case 'e':
+        return 'Sustento a casa';
+      break;
+    }
+    return "NA";
+  }
+
+  protected function getE1EstagioNegocioAttribute($value){
+    switch(strtolower($value)){
+      case 'a':
+        return 'Ainda é uma ideia';
+      break;
+
+      case 'b':
+        return 'Já comecei com ele, mas não está formalizado';
+      break;
+
+      case 'c':
+        return 'Já comecei com ele, e está formalizado';
+      break;
+
+      case 'd':
+        return 'Ele já existe há mais de um ano, mas não está formalizado';
+      break;
+
+      case 'e':
+        return 'Ele já existe há mais de um ano, e está formalizado';
+      break;
+    }
+    return "NA";
+  }
+
+  protected function getE1TempoDiaAttribute($value){
+    switch(strtolower($value)){
+      case 'a':
+        return 'Algumas horas por semana';
+      break;
+
+      case 'b':
+        return 'Pelo menos duas horas por dia';
+      break;
+
+      case 'c':
+        return 'Cerca de oito horas por dia';
+      break;
+
+      case 'd':
+        return 'Todo o tempo disponível, inclusive finais de semana';
+      break;
+
+    }
+    return "NA";
+  }
+
+  protected function getE1EstagioNegocioAttribute($value){
+    switch(strtolower($value)){
+      case 'a':
+        return 'Estou tomando muito prejuízo, e pensando em desistir';
+      break;
+
+      case 'b':
+        return 'Está devagar, sem lucro, e não sei como resolver a questão';
+      break;
+
+      case 'c':
+        return 'Entra algum dinheiro, mas ainda longe do que espero';
+      break;
+
+      case 'd':
+        return 'Estou satisfeito com os resultados atuais, e quero crescer';
+      break;
+
+    }
+    return "NA";
+  }
+
+
+  protected function getE1ApoioFamiliarAttribute($value){
+    switch(strtolower($value)){
+      case 'a':
+        return 'A maioria é contra';
+      break;
+
+      case 'b':
+        return 'Alguns acham a ideia boa, mas não dão suporte, seja emocional, seja efetivo';
+      break;
+
+      case 'c':
+        return 'Tenho suporte emocional, muitos acreditam em mim';
+      break;
+
+      case 'd':
+        return 'Recebo ajuda de membros da família para o meu negócio';
+      break;
+
+    }
+    return "NA";
+  }
+
+  protected function getE1IdealNegocioAttribute($value){
+    switch(strtolower($value)){
+      case 'a':
+        return 'Deve ser uma fonte alternativa de renda, complementar ao emprego';
+      break;
+
+      case 'b':
+        return 'Deve ser o meu sustento, de modo que no fim do dia tenha tempo livre pra mim';
+      break;
+
+      case 'c':
+        return 'Deve ser a realização de um sonho acima de tudo, mesmo que financeiramente só não dê prejuízo';
+      break;
+
+    }
+    return "NA";
+  }
+
+  protected function getE1FracassouAntesAttribute($value){
+    switch(strtolower($value)){
+      case 'a':
+        return 'Não';
+      break;
+
+      case 'b':
+        return 'Sim, já fracassei antes, mas outras pessoas causaram o revés na minha vida';
+      break;
+
+      case 'c':
+        return 'Sim, já fracassei na vida pessoal, e fui responsável pelo que aconteceu';
+      break;
+
+      case 'd':
+        return 'Sim, já fracassei com um negócio, e a culpa é minha';
+      break;
+
+      case 'e':
+        return 'Várias vezes, tanto na vida pessoal quanto com um negócio';
+      break;
+
+    }
+    return "NA";
+  }
+
 }

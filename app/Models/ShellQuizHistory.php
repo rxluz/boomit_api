@@ -128,6 +128,20 @@ use Illuminate\Database\Eloquent\Model;
     return str_replace(",.", "", $value);
   }
 
+  protected function getE2ForcasFinalAttribute($value){
+    $values=json_decode($value);
+
+
+    foreach($values as $v){
+      $newvalue=$newvalue ?? "";
+      $newvalue=$newvalue.$this->competencias($v).",";
+    }
+
+    $value=isset($newvalue) ? $newvalue."." : $value;
+
+    return str_replace(",.", "", $value);
+  }
+
 
   protected function getE2ForcaParceirosAttribute($value){
     return $this->competencias($value);

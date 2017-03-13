@@ -62,7 +62,24 @@ use Illuminate\Database\Eloquent\Model;
   protected $hidden = [''];
 
   protected function getE1GrauEscolaridadeAttribute($value){
-    return "oi ".$value;
+    switch($value){
+      case 'a':
+        return 'Desempregado';
+      break;
+
+      case 'b':
+        return 'Com um emprego';
+      break;
+
+      case 'c':
+        return 'Apenas com meu negócio, já funcionando';
+      break;
+
+      case 'd':
+        return 'Com um emprego e com o meu negócio';
+      break;
+    }
+    return "NA";
   }
 
 

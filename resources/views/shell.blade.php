@@ -391,7 +391,7 @@ Sizes: [
 							<!-- // MODULE ROW -->
 
 
-
+              @foreach ($e1 as $info1)
 
 							<!-- MODULE ROW // -->
 							<tr>
@@ -412,8 +412,8 @@ Sizes: [
 																		<table border="0" cellpadding="0" cellspacing="0" width="100%">
 																			<tr>
 																				<td valign="top" class="textContent">
-																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">Nome completo</h3>
-																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">{{ $shell->e1_proposito_detalhado }}.</div>
+																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">{{ $info1 }}</h3>
+																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">{{ $info1 }}.</div>
 																				</td>
 																			</tr>
 																		</table>
@@ -434,6 +434,7 @@ Sizes: [
 							</tr>
 							<!-- // MODULE ROW -->
 
+              @endforeach
 
 
 						<!-- EMAIL FOOTER // -->

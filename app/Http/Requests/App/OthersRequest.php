@@ -111,6 +111,7 @@ class OthersRequest extends ValidateRequest
             "storeContacts" => $this->storeContacts
           , "updateShellQuiz" => $this->updateShellQuiz
           , "storeShellQuiz" => $this->storeShellQuiz
+          , "storeShellQuiz1" => $this->storeShellQuiz
         ];
     }
 

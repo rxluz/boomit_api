@@ -64,6 +64,33 @@ use Illuminate\Database\Eloquent\Model;
   protected function getE1GrauEscolaridadeAttribute($value){
     switch(strtolower($value)){
       case 'a':
+        return 'Ensino médio completo';
+      break;
+
+      case 'b':
+        return 'Superior incompleto';
+      break;
+
+      case 'c':
+        return 'Superior completo';
+      break;
+
+      case 'd':
+        return 'Pós-graduação incompleta';
+      break;
+
+      case 'e':
+        return 'Pós-graduação completa';
+      break;
+    }
+    return "NA";
+  }
+
+
+
+  protected function getE1HojeEstaAttribute($value){
+    switch(strtolower($value)){
+      case 'a':
         return 'Desempregado';
       break;
 
@@ -144,7 +171,6 @@ use Illuminate\Database\Eloquent\Model;
 
   protected function getE2FragilidadesFinalAttribute($value){
     $values=json_decode($value);
-
 
     foreach($values as $v){
       $newvalue=$newvalue ?? "";

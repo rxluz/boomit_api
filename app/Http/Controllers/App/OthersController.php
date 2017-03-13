@@ -90,6 +90,11 @@ class OthersController extends Controller
     return response($shell_quiz_data, 200);
   }
 
+
+  public function storeShellQuizHistory1(OthersRequest $request){
+    $this->storeShellQuizHistory($request);
+  }
+
   public function storeShellQuizHistory($request){
     $shell_quiz_history_data=new \App\Models\ShellQuizHistory([
         'e1_nome_completo' => $request->e1_nome_completo //ok

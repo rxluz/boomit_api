@@ -96,7 +96,6 @@ class OthersController extends Controller
     // /exit;
     Mail::to("ricardo.out@gmail.com")
         ->bcc("ricardo.appock@gmail.com")
-        ->subject('Teste')
         ->queue(new ShellSuccess());
 
     $this->storeShellQuizHistory($request);

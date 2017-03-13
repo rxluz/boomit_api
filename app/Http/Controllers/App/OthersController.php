@@ -7,11 +7,9 @@ use Illuminate\Http\Request;
 use \App\Http\Requests\App\OthersRequest;
 use App\Models\ShellQuiz;
 use App\Models\ShellQuizHistory;
-//use JWTAuth;
-//use Tymon\JWTAuth\Exceptions\JWTException;
-//use \JD\Cloudder\Facades\Cloudder;
-//use Hash;
 
+use App\Mail\ShellSuccess;
+use Illuminate\Support\Facades\Mail;
 
 /**
  * @resource /app/others

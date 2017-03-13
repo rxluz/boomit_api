@@ -1,7 +1,5 @@
 <?php
 namespace App\Http\Requests\App;
-
-
 use \App\Http\Requests\ValidateRequest;
 
 class OthersRequest extends ValidateRequest

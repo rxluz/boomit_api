@@ -79,7 +79,7 @@ class OthersController extends Controller
       ]);
 
     $shell_quiz_data->save();
-    return response(['id'=>$shell_quiz_data->id, 200);
+    return response([$shell_quiz_data, 200);
   }
 
   public function updateShellQuiz(OthersRequest $request, $id){

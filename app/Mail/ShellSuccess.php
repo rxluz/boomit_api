@@ -6,7 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Blade;
+//use Illuminate\Support\Facades\Blade;
 
 class ShellSuccess extends Mailable
 {
@@ -30,7 +30,7 @@ class ShellSuccess extends Mailable
     public function build()
     {
       return $this->from('rx@appock.co')
-            ->view('shell.success');
+            ->view('shell.success.blade');
         //return $this->view('view.name');
     }
 }

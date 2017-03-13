@@ -89,7 +89,7 @@ use Illuminate\Database\Eloquent\Model;
 
     foreach($values as $v){
       $newvalue=isset($newvalue) ?? "";
-      $newvalue.=$this->moraCom($v).",";
+      $newvalue=$newvalue.$this->moraCom($v).",";
     }
 
     $value=isset($newvalue) ? $newvalue."." : $value;

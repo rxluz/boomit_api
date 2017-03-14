@@ -86,26 +86,26 @@ use Illuminate\Database\Eloquent\Model;
     return "NA";
   }
 
-  protected function getE1TempoDiaAttribute($value){
-    switch(strtolower($value)){
-      case 'a':
-        return 'Algumas horas por semana';
-      break;
-
-      case 'b':
-        return 'Pelo menos duas horas por dia';
-      break;
-
-      case 'c':
-        return 'Cerca de oito horas por dia';
-      break;
-
-      case 'd':
-        return 'Todo o tempo disponível, inclusive finais de semana';
-      break;
-    }
-    return "NA";
-  }
+  // protected function getE1TempoDiaAttribute($value){
+  //   switch(strtolower($value)){
+  //     case 'a':
+  //       return 'Algumas horas por semana';
+  //     break;
+  //
+  //     case 'b':
+  //       return 'Pelo menos duas horas por dia';
+  //     break;
+  //
+  //     case 'c':
+  //       return 'Cerca de oito horas por dia';
+  //     break;
+  //
+  //     case 'd':
+  //       return 'Todo o tempo disponível, inclusive finais de semana';
+  //     break;
+  //   }
+  //   return "NA";
+  // }
 
   protected function getE2CorrespondeForcaAttribute($value){
     switch(strtolower($value)){

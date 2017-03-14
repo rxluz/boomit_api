@@ -242,7 +242,7 @@ class OthersController extends Controller
     $shell_quiz->e3_como_entrei=$request->e3_como_entrei ?? $shell_quiz->e3_como_entrei; //ok
     $shell_quiz->e3_como_saio=$request->e3_como_saio ?? $shell_quiz->e3_como_saio; //ok
 
-    $this->storeShellQuizHistory($request);
+    //$this->storeShellQuizHistory($request);
 
 
     if(isset($request->e3_como_saio) && trim($request->e3_como_saio)!=""){

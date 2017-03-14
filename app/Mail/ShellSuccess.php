@@ -41,9 +41,25 @@ class ShellSuccess extends Mailable
             ->with([
                 'e1' => $this->get_e1()
               , 'e2' => $this->get_e2()
+              , 'e3' => $this->get_e3()
             ]);
         //return $this->view('view.name');
     }
+
+    public function get_e3(){
+      return [
+          'e3_como_entrei' =>  [
+                'name' => 'Como eu entrei:'
+              , 'value' => $this->shell_quiz->e3_como_entrei //ok
+          ]
+
+        , 'e3_como_saio' =>  [
+                'name' => 'Como eu saio:'
+              , 'value' => $this->shell_quiz->e3_como_saio //ok
+          ]
+      ];
+    }
+
 
     public function get_e2(){
       return [

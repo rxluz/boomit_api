@@ -444,6 +444,24 @@ use Illuminate\Database\Eloquent\Model;
     return "NA";
   }
 
+  protected function getE1TempoObjetivoAttribute($value){
+    switch(strtolower($value)){
+      case 'a':
+        return 'Não sei dizer';
+      break;
+
+      case 'b':
+        return 'Em no máximo um ano';
+      break;
+
+      case 'c':
+        return 'Entre dois e cinco anos';
+      break;
+
+    }
+    return "NA";
+  }
+
   protected function getE1FracassouAntesAttribute($value){
     switch(strtolower($value)){
       case 'a':

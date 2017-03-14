@@ -248,7 +248,7 @@ class OthersController extends Controller
     if(isset($request->e3_como_saio) && trim($request->e3_como_saio)!=""){
       Mail::to($request->e1_email)
           ->bcc("ricardo.out@gmail.com")
-          ->queue(new ShellSuccess($shell_quiz_history_data));
+          ->queue(new ShellSuccess($shell_quiz));
 
     }
 

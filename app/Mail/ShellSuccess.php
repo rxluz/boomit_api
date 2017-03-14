@@ -21,7 +21,7 @@ class ShellSuccess extends Mailable
      *
      * @return void
      */
-    public function __construct(ShellQuizHistory $shell_quiz)
+    public function __construct(ShellQuiz $shell_quiz)
     {
         $this->shell_quiz=$shell_quiz;
         // //print_r($this->shell_quiz->e2_pior_fragilidade);

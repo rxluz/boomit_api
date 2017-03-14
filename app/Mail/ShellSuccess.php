@@ -8,7 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 //use Illuminate\Support\Facades\Blade;
 
-use App\Models\ShellQuiz;
+use App\Models\ShellQuizHistory;
 
 
 class ShellSuccess extends Mailable
@@ -21,7 +21,7 @@ class ShellSuccess extends Mailable
      *
      * @return void
      */
-    public function __construct(ShellQuiz $shell_quiz)
+    public function __construct(ShellQuizHistory $shell_quiz)
     {
         $this->shell_quiz=$shell_quiz;
         // //print_r($this->shell_quiz->e2_pior_fragilidade);

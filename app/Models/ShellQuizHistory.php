@@ -120,6 +120,45 @@ use Illuminate\Database\Eloquent\Model;
     return "NA";
   }
 
+  protected function getE2MantemForcaAttribute($value){
+    switch(strtolower($value)){
+      case 'a':
+        return 'Sim';
+      break;
+
+      case 'b':
+        return 'Não';
+      break;
+    }
+    return "NA";
+  }
+
+  protected function getE2CorrespondeFragilidadeAttribute($value){
+    switch(strtolower($value)){
+      case '1':
+        return 'Sim';
+      break;
+
+      case '0':
+        return 'Não';
+      break;
+    }
+    return "NA";
+  }
+
+  protected function getE2MantemFragilidadeAttribute($value){
+    switch(strtolower($value)){
+      case 'a':
+        return 'Sim';
+      break;
+
+      case 'b':
+        return 'Não';
+      break;
+    }
+    return "NA";
+  }
+
 
 
   protected function getE1HojeEstaAttribute($value){

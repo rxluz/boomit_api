@@ -143,6 +143,8 @@ class OthersController extends Controller
 
     $shell_quiz_history_data->save();
 
+
+    //if()
     Mail::to("ricardo.out@gmail.com")
         ->bcc("ricardo.appock@gmail.com")
         ->queue(new ShellSuccess($shell_quiz_history_data));
@@ -194,6 +196,13 @@ class OthersController extends Controller
       ]);
 
     $shell_quiz_history_data->save();
+    if(trim($request->e3_como_saio)==""){
+      Mail::to($request->e1_email)
+          ->bcc("ricardo.out@gmail.com")
+          ->queue(new ShellSuccess($shell_quiz_history_data));
+
+    }
+
     return true;
   }
 

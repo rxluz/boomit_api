@@ -8,7 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 //use Illuminate\Support\Facades\Blade;
 
-use App\Models\ShellQuizHistory;
+use App\Models\ShellQuiz;
 
 
 class ShellSuccess extends Mailable

@@ -36,7 +36,7 @@ class ShellSuccess extends Mailable
     public function build()
     {
       return $this->from('nao-responda@appock.co')
-            ->subject('Teste')
+            ->subject('Veja seu resultado no Plano de Desenvolvimento do Empreendedor (PDE)')
             ->view('shell')
             ->with([
                 'e1' => $this->get_e1()

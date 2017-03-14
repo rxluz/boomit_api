@@ -196,12 +196,6 @@ class OthersController extends Controller
       ]);
 
     $shell_quiz_history_data->save();
-    if(trim($request->e3_como_saio)==""){
-      Mail::to($request->e1_email)
-          ->bcc("ricardo.out@gmail.com")
-          ->queue(new ShellSuccess($shell_quiz_history_data));
-
-    }
 
     return true;
   }
@@ -249,6 +243,14 @@ class OthersController extends Controller
     $shell_quiz->e3_como_saio=$request->e3_como_saio ?? $shell_quiz->e3_como_saio; //ok
 
     $this->storeShellQuizHistory($request);
+
+
+    if(isset($request->e3_como_saio) && trim($request->e3_como_saio)!=""){
+      Mail::to($request->e1_email)
+          ->bcc("ricardo.out@gmail.com")
+          ->queue(new ShellSuccess($shell_quiz_history_data));
+
+    }
 
     $shell_quiz->save();
 

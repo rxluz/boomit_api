@@ -68,12 +68,27 @@ use Illuminate\Database\Eloquent\Model;
 
   protected function getE2Forca2Attribute($value){
     $val=json_decode($value);
-    return "Força: ".$this->competencias($val->forca)."<br>Ação:".$val->acao;
+    return "<b>Força:</b> ".$this->competencias($val->forca)."<br><b>Ação:</b>".$val->acao;
   }
 
   protected function getE2Forca3Attribute($value){
     $val=json_decode($value);
-    return "Força: ".$this->competencias($val->forca)."<br>Ação:".$val->acao;
+    return "<b>Força:</b> ".$this->competencias($val->forca)."<br><b>Ação:</b>".$val->acao;
+  }
+
+  protected function getE2Fragilidade3Attribute($value){
+    $val=json_decode($value);
+    return "<b>Força:</b> ".$this->competencias($val->forca)."<br><b>Ação:</b>".$val->acao;
+  }
+
+  protected function getE2Fragilidade2Attribute($value){
+    $val=json_decode($value);
+    return "<b>Força:</b> ".$this->competencias($val->forca)."<br><b>Ação:</b>".$val->acao;
+  }
+
+  protected function getE2Fragilidade1Attribute($value){
+    $val=json_decode($value);
+    return "<b>Força:</b> ".$this->competencias($val->forca)."<br><b>Ação:</b>".$val->acao;
   }
 
   protected function getE1DataNascimentoAttribute($value){

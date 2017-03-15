@@ -63,7 +63,7 @@ use Illuminate\Database\Eloquent\Model;
 
   protected function getE2Forca1Attribute($value){
     $val=json_decode($value);
-    return "<b>Força:</b> ".$this->competencias($val->forca)."<b>Ação:</b>".$val->acao;
+    return "<b>Força:</b> ".$this->competencias($val->forca)."<br><b>Ação:</b>".$val->acao;
   }
 
   protected function getE2Forca2Attribute($value){

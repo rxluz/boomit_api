@@ -413,7 +413,7 @@ Sizes: [
 																			<tr>
 																				<td valign="top" class="textContent">
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">{{ $info1["name"] }}</h3>
-																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">{{ $info1["value"] }}.</div>
+																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">{!! $info1["value"] !!}.</div>
 																				</td>
 																			</tr>
 																		</table>
@@ -506,7 +506,7 @@ Sizes: [
                                       <tr>
                                         <td valign="top" class="textContent">
                                           <h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">{{ $info2["name"] }}</h3>
-                                          <div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">{{ $info2["value"] }}.</div>
+                                          <div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">{!! $info2["value"] !!}.</div>
                                         </td>
                                       </tr>
                                     </table>
@@ -600,7 +600,7 @@ Sizes: [
                                       <tr>
                                         <td valign="top" class="textContent">
                                           <h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">{{ $info3["name"] }}</h3>
-                                          <div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">{{ $info3["value"] }}.</div>
+                                          <div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">{!! $info3["value"] !!}.</div>
                                         </td>
                                       </tr>
                                     </table>

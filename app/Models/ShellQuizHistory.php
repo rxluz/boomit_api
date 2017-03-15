@@ -61,6 +61,10 @@ use Illuminate\Database\Eloquent\Model;
 
   protected $hidden = [''];
 
+  protected function E1DataNascimentoAttribute($value){
+    return substr($value, 0, 2)."/".substr($value, 2, 2)."/".substr($value, 4, 4);
+  }
+
   protected function getE1GrauEscolaridadeAttribute($value){
     switch(strtolower($value)){
       case 'a':

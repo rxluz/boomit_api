@@ -61,6 +61,11 @@ use Illuminate\Database\Eloquent\Model;
 
   protected $hidden = [''];
 
+  protected function getE2Forca1Attribute($value){
+    $val=json_decode($value);
+    return $this->competencias($val["forca"]).":".$val["acao"];
+  }
+
   protected function getE1DataNascimentoAttribute($value){
     return substr($value, 0, 2)."/".substr($value, 2, 2)."/".substr($value, 4, 4);
   }

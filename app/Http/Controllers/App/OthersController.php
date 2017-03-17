@@ -263,7 +263,7 @@ class OthersController extends Controller
   public function reportShellQuiz(){
     $data=$this->shell_quiz_history->where('e3_como_saio', "!=", "")->get();
 
-    return view('shell_csv', $data);
+    return view('shell_csv', ['data' => $data]);
   }
 
 

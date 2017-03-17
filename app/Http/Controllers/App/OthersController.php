@@ -274,7 +274,7 @@ class OthersController extends Controller
         $csv->insertOne($person->toArray());
     }
 
-    $csv->output('people.csv');
+    $csv->output('relatorio_shell'.date('Ymdhis').'.csv');
     // $output='';
     //  foreach ($table as $row) {
     //      $output.=  implode(",",$row->toArray());

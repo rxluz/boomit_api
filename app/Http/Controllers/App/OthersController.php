@@ -263,7 +263,7 @@ class OthersController extends Controller
   public function reportShellQuiz(){
     //$people=$this->shell_quiz_history->where('e3_como_saio', "!=", "")->get();
 
-    $people = ShellQuizHistory::all();
+    $people = ShellQuizHistory::where('e3_como_saio', '!=', '');
 
     $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject());
 

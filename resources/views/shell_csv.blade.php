@@ -1,4 +1,6 @@
-e1_nome_completo,e1_email <br>
+e1_nome_completo,e1_email,e1_data_nascimento <br>
 @foreach($data as $d)
-{{ $d->e1_nome_completo }},{{ $d->e1_email }} <br>
+  @foreach($d as $a)
+  {{ $a }},
+  @endforeach;
 @endforeach

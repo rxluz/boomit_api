@@ -58,9 +58,9 @@ use Illuminate\Database\Eloquent\Model;
       , 'e3_como_saio' //ok
   ];
 
-  protected $casts = [
-          'e2_forca_1' => 'string',
-      ];
+  // protected $casts = [
+  //         'e2_forca_1' => 'string',
+  //     ];
 
   protected $hidden = [''];
 

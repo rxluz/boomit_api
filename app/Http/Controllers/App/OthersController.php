@@ -260,11 +260,53 @@ class OthersController extends Controller
     return response($shell_quiz, 200);
   }
 
-  // protected function getForca($value){
-  //   $val=json_decode($value);
-  //
-  //   return "FORÇA: ".$this->competencias($val->forca)." /// AÇÃO: ".$val->acao;
-  // }
+  protected function getForca($value){
+    $val=json_decode($value);
+
+    return "FORÇA: ".$this->competencias($val->forca)." /// AÇÃO: ".$val->acao;
+  }
+
+  protected function competencias($value){
+    switch(strtolower($value)){
+      case 'a':
+        return 'Modelo de Negócios';
+      break;
+
+      case 'b':
+        return 'Pesquisa de Mercado';
+      break;
+
+      case 'c':
+        return 'Planejamento Estratégico';
+      break;
+
+      case 'd':
+        return 'Planejamento Financeiro';
+      break;
+
+      case 'e':
+        return 'Marketing';
+      break;
+
+      case 'f':
+        return 'Legislação';
+      break;
+
+      case 'g':
+        return 'Gestão de Pessoas';
+      break;
+
+      case 'h':
+        return 'Gestão Operacional';
+      break;
+
+      case 'i':
+        return 'Resposabilidade Social';
+      break;
+
+    }
+    return "NA";
+  }
 
 
   public function reportShellQuiz(){
@@ -277,7 +319,7 @@ class OthersController extends Controller
     $csv->insertOne(\Schema::getColumnListing('shell_quiz_history'));
 
     foreach ($people as $person) {
-      //$person->e2_forca_1="hello";
+        $person->e2_forca_1=$this->getForca($person->e2_forca_1);
         $csv->insertOne($person->toArray());
     }
 

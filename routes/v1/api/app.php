@@ -24,7 +24,7 @@ Route::group(['prefix' => 'v1'], function () {
 
 
   Route::get('report', function(){
-    return response('hello report', 200);
+    return 'hello report';
   });
 
   Route::group([

@@ -266,39 +266,24 @@ class OthersController extends Controller
   public function reportShellQuiz(){
     //$people=$this->shell_quiz_history->where('e3_como_saio', "!=", "")->get();
 
-    $people = ShellQuizHistory2::where('e3_como_saio', '!=', '')->get();
+    $quiz = ShellQuizHistory2::where('e3_como_saio', '!=', '')->get();
 
     $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject());
 
     $csv->insertOne(\Schema::getColumnListing('shell_quiz_history'));
 
-    foreach ($people as $person) {
-        $person->e2_forca_1=$person->e2_forca_1;
-        $person->e2_forca_2=$person->e2_forca_2;
-        $person->e2_forca_3=$person->e2_forca_3;
-        $person->e2_fragilidade_1=$person->e2_fragilidade_1;
-        $person->e2_fragilidade_2=$person->e2_fragilidade_2;
-        $person->e2_fragilidade_3=$person->e2_fragilidade_3;
-        //$date=new DateTime::createFromFormat('Y-m-d H:i:s', $person->created_at);
-        $person->created_at=$person->created_at->format('d/m/Y');
+    foreach ($quiz as $answer) {
+        $answer->e2_forca_1=$answer->e2_forca_1;
+        $answer->e2_forca_2=$answer->e2_forca_2;
+        $answer->e2_forca_3=$answer->e2_forca_3;
+        $answer->e2_fragilidade_1=$answer->e2_fragilidade_1;
+        $answer->e2_fragilidade_2=$answer->e2_fragilidade_2;
+        $answer->e2_fragilidade_3=$answer->e2_fragilidade_3;
 
-
-        $csv->insertOne($person->toArray());
+        $csv->insertOne($answer->toArray());
     }
 
     $csv->output('relatorio_shell'.date('Ymdhis').'.csv');
-    // $output='';
-    //  foreach ($table as $row) {
-    //      $output.=  implode(",",$row->toArray());
-    //  }
-    //  $headers = array(
-    //      'Content-Type' => 'text/csv',
-    //      'Content-Disposition' => 'attachment; filename="ExportFileName.csv"',
-    //  );
-    //
-    //  return Response::make(rtrim($output, "\n"), 200, $headers);
-
-    //return view('shell_csv', ['data' => $data]);
   }
 
 

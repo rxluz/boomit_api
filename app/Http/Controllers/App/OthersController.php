@@ -261,6 +261,7 @@ class OthersController extends Controller
   }
 
   protected function getForca($val){
+    return $val;
     //$val=json_decode($value);
     print_r($val);
     exit;

@@ -62,6 +62,17 @@ use Illuminate\Database\Eloquent\Model;
       'e2_forca_1' => 'string',
   ];
 
+
+  public function getCreatedAtAttribute($date)
+  {
+      return Carbon\Carbon::createFromFormat('Y-m-d d/m/Y H:i:s', $date)->format('d/m/Y \à\s H:i:s');
+  }
+
+  public function getUpdatedAtAttribute($date)
+  {
+      return Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('d/m/Y \à\s H:i:s');
+  }
+
   protected $hidden = [''];
 
   protected function getE2Forca1Attribute($value){

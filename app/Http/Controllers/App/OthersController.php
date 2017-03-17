@@ -261,18 +261,29 @@ class OthersController extends Controller
 
 
   public function reportShellQuiz(){
-    $table=$this->shell_quiz_history->where('e3_como_saio', "!=", "")->get();
+    $people=$this->shell_quiz_history->where('e3_como_saio', "!=", "")->get();
 
-    $output='';
-     foreach ($table as $row) {
-         $output.=  implode(",",$row->toArray());
-     }
-     $headers = array(
-         'Content-Type' => 'text/csv',
-         'Content-Disposition' => 'attachment; filename="ExportFileName.csv"',
-     );
+    $people = Person::all();
 
-     return Response::make(rtrim($output, "\n"), 200, $headers);
+    $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject());
+
+    $csv->insertOne(\Schema::getColumnListing('people'));
+
+    foreach ($people as $person) {
+        $csv->insertOne($person->toArray());
+    }
+
+    $csv->output('people.csv');
+    // $output='';
+    //  foreach ($table as $row) {
+    //      $output.=  implode(",",$row->toArray());
+    //  }
+    //  $headers = array(
+    //      'Content-Type' => 'text/csv',
+    //      'Content-Disposition' => 'attachment; filename="ExportFileName.csv"',
+    //  );
+    //
+    //  return Response::make(rtrim($output, "\n"), 200, $headers);
 
     //return view('shell_csv', ['data' => $data]);
   }

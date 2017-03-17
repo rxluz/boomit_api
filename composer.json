@@ -12,7 +12,8 @@
         "barryvdh/laravel-cors": "^0.8.2",
 	"joshtronic/php-googleplaces": "dev-master",
         "mpociot/laravel-apidoc-generator": "1.6.6",
-        "guzzlehttp/guzzle": "^6.2"
+        "guzzlehttp/guzzle": "^6.2",
+        "league/csv": "^8.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

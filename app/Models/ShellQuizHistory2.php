@@ -61,7 +61,7 @@ use Illuminate\Database\Eloquent\Model;
 
   protected $hidden = [''];
 
-  protected function getE2Forca1Attribute($value){
+  protected function get_e2_forca_1_attribute($value){
     return "ola mundo";
     $val=json_decode($value);
 

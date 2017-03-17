@@ -58,11 +58,13 @@ use Illuminate\Database\Eloquent\Model;
       , 'e3_como_saio' //ok
   ];
 
+  protected $casts = [
+          'e2_forca_1' => 'array',
+      ];
 
   protected $hidden = [''];
 
-  protected function get_e2_forca_1_attribute($value){
-    return "ola mundo";
+  protected function getE2Forca1Attribute($value){
     $val=json_decode($value);
 
     return "FORÇA: ".$this->competencias($val->forca)." /// AÇÃO: ".$val->acao;

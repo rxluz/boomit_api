@@ -261,7 +261,7 @@ class OthersController extends Controller
 
 
   public function reportShellQuiz(){
-    return response('hello reportShellQuiz ', 200);
+    return view('shell_csv');
   }
 
 

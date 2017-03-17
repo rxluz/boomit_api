@@ -320,6 +320,7 @@ class OthersController extends Controller
 
     foreach ($people as $person) {
         $person->e2_forca_1=$this->getForca($person->e2_forca_1);
+        
         $csv->insertOne($person->toArray());
     }
 

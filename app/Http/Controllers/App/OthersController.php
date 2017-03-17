@@ -263,11 +263,11 @@ class OthersController extends Controller
   public function reportShellQuiz(){
     $people=$this->shell_quiz_history->where('e3_como_saio', "!=", "")->get();
 
-    $people = Person::all();
+    //$people = Person::all();
 
     $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject());
 
-    $csv->insertOne(\Schema::getColumnListing('people'));
+    $csv->insertOne(\Schema::getColumnListing('shell_quiz_history'));
 
     foreach ($people as $person) {
         $csv->insertOne($person->toArray());

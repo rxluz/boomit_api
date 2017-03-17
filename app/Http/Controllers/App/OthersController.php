@@ -279,7 +279,9 @@ class OthersController extends Controller
         $person->e2_fragilidade_1=$person->e2_fragilidade_1;
         $person->e2_fragilidade_2=$person->e2_fragilidade_2;
         $person->e2_fragilidade_3=$person->e2_fragilidade_3;
-        $person->created_at=$person->created_at->format('d/m/Y H:i:s');
+        $date=DateTime::createFromFormat('Y-m-d H:i:s', $person->created_at);
+        $person->created_at=$date->format('d/m/Y');
+
 
         $csv->insertOne($person->toArray());
     }

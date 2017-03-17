@@ -260,51 +260,7 @@ class OthersController extends Controller
     return response($shell_quiz, 200);
   }
 
-  protected function getForca($val){
-    return $val;
-  }
 
-  protected function competencias($value){
-    switch(strtolower($value)){
-      case 'a':
-        return 'Modelo de Negócios';
-      break;
-
-      case 'b':
-        return 'Pesquisa de Mercado';
-      break;
-
-      case 'c':
-        return 'Planejamento Estratégico';
-      break;
-
-      case 'd':
-        return 'Planejamento Financeiro';
-      break;
-
-      case 'e':
-        return 'Marketing';
-      break;
-
-      case 'f':
-        return 'Legislação';
-      break;
-
-      case 'g':
-        return 'Gestão de Pessoas';
-      break;
-
-      case 'h':
-        return 'Gestão Operacional';
-      break;
-
-      case 'i':
-        return 'Resposabilidade Social';
-      break;
-
-    }
-    return "NA";
-  }
 
 
   public function reportShellQuiz(){
@@ -320,6 +276,9 @@ class OthersController extends Controller
         $person->e2_forca_1=$person->e2_forca_1;
         $person->e2_forca_2=$person->e2_forca_2;
         $person->e2_forca_3=$person->e2_forca_3;
+        $person->e2_fragilidade_1=$person->e2_fragilidade_1;
+        $person->e2_fragilidade_2=$person->e2_fragilidade_2;
+        $person->e2_fragilidade_3=$person->e2_fragilidade_3;
 
         $csv->insertOne($person->toArray());
     }

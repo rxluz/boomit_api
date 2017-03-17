@@ -286,7 +286,7 @@ Sizes: [
 								<tr>
 									<td align="center" valign="top">
 										<!-- CENTERING TABLE // -->
-										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<table border="0" cellpadding="0"  bgcolor="#e82219" cellspacing="0" width="100%">
 											<tr>
 												<td align="center" valign="top">
 													<!-- FLEXIBLE CONTAINER // -->

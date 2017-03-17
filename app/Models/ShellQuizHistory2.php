@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use \Carbon\Carbon;
+//use Carbon/Carbon;
 
  class ShellQuizHistory2 extends Model  {
   /**
@@ -66,12 +66,12 @@ use \Carbon\Carbon;
 
   public function getCreatedAtAttribute($date)
   {
-      return Carbon\Carbon::createFromFormat('Y-m-d d/m/Y H:i:s', $date)->format('d/m/Y \à\s H:i:s');
+      return Carbon::createFromFormat('Y-m-d d/m/Y H:i:s', $date)->format('d/m/Y \à\s H:i:s');
   }
 
   public function getUpdatedAtAttribute($date)
   {
-      return Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('d/m/Y \à\s H:i:s');
+      return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('d/m/Y \à\s H:i:s');
   }
 
   protected $hidden = [''];

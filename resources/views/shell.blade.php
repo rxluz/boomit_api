@@ -281,6 +281,41 @@ Sizes: [
 						-->
 						<table bgcolor="#FFFFFF"  border="0" cellpadding="0" cellspacing="0" width="500" id="emailBody">
 
+
+							<!-- MODULE ROW // -->
+								<tr>
+									<td align="center" valign="top">
+										<!-- CENTERING TABLE // -->
+										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+											<tr>
+												<td align="center" valign="top">
+													<!-- FLEXIBLE CONTAINER // -->
+													<table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
+														<tr>
+															<td align="center" valign="top" width="500" class="flexibleContainerCell">
+
+																<!-- CONTENT TABLE // -->
+																<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																	<tr>
+																		<td valign="top" class="imageContent">
+																			<img src="http://pde.boomit.co/app/assets/img/logoIJ.svg" width="500" class="flexibleImage" style="max-width:500px;width:100%;display:block;" alt="Text" title="Text" />
+																		</td>
+																	</tr>
+																</table>
+																<!-- // CONTENT TABLE -->
+
+															</td>
+														</tr>
+													</table>
+													<!-- // FLEXIBLE CONTAINER -->
+												</td>
+											</tr>
+										</table>
+										<!-- // CENTERING TABLE -->
+									</td>
+								</tr>
+							<!-- // MODULE ROW -->
+
 							<!-- MODULE ROW // -->
 							<!--
 								To move or duplicate any of the design patterns

@@ -261,9 +261,20 @@ class OthersController extends Controller
 
 
   public function reportShellQuiz(){
-    $data=$this->shell_quiz_history->where('e3_como_saio', "!=", "")->get();
+    $table=$this->shell_quiz_history->where('e3_como_saio', "!=", "")->get();
 
-    return view('shell_csv', ['data' => $data]);
+    $output='';
+     foreach ($table as $row) {
+         $output.=  implode(",",$row->toArray());
+     }
+     $headers = array(
+         'Content-Type' => 'text/csv',
+         'Content-Disposition' => 'attachment; filename="ExportFileName.csv"',
+     );
+
+     return Response::make(rtrim($output, "\n"), 200, $headers);
+
+    //return view('shell_csv', ['data' => $data]);
   }
 
 

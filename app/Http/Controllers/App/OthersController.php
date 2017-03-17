@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use \App\Http\Requests\App\OthersRequest;
 use App\Models\ShellQuiz;
 use App\Models\ShellQuizHistory;
+use App\Models\ShellQuizHistory2;
 
 use App\Mail\ShellSuccess;
 use Illuminate\Support\Facades\Mail;
@@ -263,7 +264,7 @@ class OthersController extends Controller
   public function reportShellQuiz(){
     //$people=$this->shell_quiz_history->where('e3_como_saio', "!=", "")->get();
 
-    $people = ShellQuizHistory::where('e3_como_saio', '!=', '')->get();
+    $people = ShellQuizHistory2::where('e3_como_saio', '!=', '')->get();
 
     $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject());
 

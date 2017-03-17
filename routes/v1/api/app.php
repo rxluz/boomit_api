@@ -23,7 +23,7 @@ Route::group(['prefix' => 'v1'], function () {
   };
 
 
-  Route::get('report', function(){
+  Ro1ute::get('report', function(){
     return 'hello report';
   });
 

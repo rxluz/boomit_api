@@ -65,15 +65,15 @@ use Illuminate\Database\Eloquent\Model;
   ];
 
 
-  public function getCreatedAtAttribute($date)
-  {
-      return $date->format('d/m/Y \à\s H:i:s');
-  }
-
-  public function getUpdatedAtAttribute($date)
-  {
-      return $date->format('d/m/Y \à\s H:i:s');
-  }
+  // public function getCreatedAtAttribute($date)
+  // {
+  //     return $date->format('d/m/Y \à\s H:i:s');
+  // }
+  //
+  // public function getUpdatedAtAttribute($date)
+  // {
+  //     return $date->format('d/m/Y \à\s H:i:s');
+  // }
 
   protected $hidden = [''];
 

@@ -260,7 +260,7 @@ class OthersController extends Controller
     return response($shell_quiz, 200);
   }
 
-  protected function getForca($value){
+  protected function getForca($val){
     //$val=json_decode($value);
 
     return "FORÇA: ".$this->competencias($val->forca)." /// AÇÃO: ".$val->acao;

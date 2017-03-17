@@ -22,6 +22,10 @@ Route::group(['prefix' => 'v1'], function () {
     return response("", 200);
   };
 
+  Route::get('report', function(){
+    return 'hello report';
+  });
+
 
   Route::group([
       'prefix' => 'others',

@@ -77,7 +77,7 @@ use Illuminate\Database\Eloquent\Model;
   //     return $date->format('d/m/Y \à\s H:i:s');
   // }
 
-  protected $hidden = [''];
+  //protected $hidden = [''];
 
   protected function getE2Forca1Attribute($value){
     $val=json_decode($value);

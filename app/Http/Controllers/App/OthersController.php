@@ -260,4 +260,9 @@ class OthersController extends Controller
   }
 
 
+  public function reportShellQuiz(){
+    return response('hello reportShellQuiz ', 200);
+  }
+
+
 }

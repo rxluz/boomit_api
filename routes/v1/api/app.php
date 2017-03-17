@@ -22,7 +22,7 @@ Route::group(['prefix' => 'v1'], function () {
     return response("", 200);
   };
 
-
+aa
   Route::get('report', function(){
     return response('hello report', 200);
   });

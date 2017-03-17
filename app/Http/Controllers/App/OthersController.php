@@ -262,6 +262,8 @@ class OthersController extends Controller
 
   protected function getForca($val){
     //$val=json_decode($value);
+    print_r($val);
+    exit;
 
     return "FORÇA: ".$this->competencias($val["forca"])." /// AÇÃO: ".$val["acao"];
   }

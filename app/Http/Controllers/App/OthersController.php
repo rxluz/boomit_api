@@ -260,6 +260,12 @@ class OthersController extends Controller
     return response($shell_quiz, 200);
   }
 
+  // protected function getForca($value){
+  //   $val=json_decode($value);
+  //
+  //   return "FORÇA: ".$this->competencias($val->forca)." /// AÇÃO: ".$val->acao;
+  // }
+
 
   public function reportShellQuiz(){
     //$people=$this->shell_quiz_history->where('e3_como_saio', "!=", "")->get();
@@ -271,7 +277,7 @@ class OthersController extends Controller
     $csv->insertOne(\Schema::getColumnListing('shell_quiz_history'));
 
     foreach ($people as $person) {
-      $person->e2_forca_1="hello";
+      //$person->e2_forca_1="hello";
         $csv->insertOne($person->toArray());
     }
 

@@ -62,8 +62,9 @@ use Illuminate\Database\Eloquent\Model;
   protected $hidden = [''];
 
   protected function getE2Forca1Attribute($value){
-    $val=json_decode($value);
     return "ola mundo";
+    $val=json_decode($value);
+
     return "FORÇA: ".$this->competencias($val->forca)." /// AÇÃO: ".$val->acao;
   }
 
@@ -93,7 +94,7 @@ use Illuminate\Database\Eloquent\Model;
   }
 
   protected function getE1DataNascimentoAttribute($value){
-    return substr($value, 0, 2)."/AA".substr($value, 2, 2)."/".substr($value, 4, 4);
+    return substr($value, 0, 2)."/".substr($value, 2, 2)."/".substr($value, 4, 4);
   }
 
   protected function getE1GrauEscolaridadeAttribute($value){

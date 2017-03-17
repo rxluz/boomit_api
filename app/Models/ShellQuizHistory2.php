@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\Model;
    */
   protected $table = 'shell_quiz';
 
+  protected $hidden = ['created_at', 'updated_at'];
+
   /**
    * The attributes that are mass assignable.
    *

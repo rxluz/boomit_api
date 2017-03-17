@@ -174,16 +174,17 @@ use Illuminate\Database\Eloquent\Model;
   }
 
   protected function getE2MantemForcaAttribute($value){
-    switch(strtolower($value)){
-      case 'a':
-        return 'Sim';
-      break;
-
-      case 'b':
-        return 'Não';
-      break;
-    }
-    return "NA";
+    return $this->competencias($value);
+    // switch(strtolower($value)){
+    //   case 'a':
+    //     return 'Sim';
+    //   break;
+    //
+    //   case 'b':
+    //     return 'Não';
+    //   break;
+    // }
+    // return "NA";
   }
 
   protected function getE2CorrespondeFragilidadeAttribute($value){

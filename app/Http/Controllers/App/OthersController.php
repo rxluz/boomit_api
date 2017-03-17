@@ -271,6 +271,7 @@ class OthersController extends Controller
     $csv->insertOne(\Schema::getColumnListing('shell_quiz_history'));
 
     foreach ($people as $person) {
+      $person->e2_forca_1="hello";
         $csv->insertOne($person->toArray());
     }
 

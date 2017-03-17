@@ -63,32 +63,32 @@ use Illuminate\Database\Eloquent\Model;
 
   protected function getE2Forca1Attribute($value){
     $val=json_decode($value);
-    return "<b>Força:</b> ".$this->competencias($val->forca)."<br><b>Ação:</b>".$val->acao;
+    return "FORÇA: ".$this->competencias($val->forca)." /// AÇÃO: ".$val->acao;
   }
 
   protected function getE2Forca2Attribute($value){
     $val=json_decode($value);
-    return "<b>Força:</b> ".$this->competencias($val->forca)."<br><b>Ação:</b>".$val->acao;
+    return "FORÇA: ".$this->competencias($val->forca)." /// AÇÃO: ".$val->acao;
   }
 
   protected function getE2Forca3Attribute($value){
     $val=json_decode($value);
-    return "<b>Força:</b> ".$this->competencias($val->forca)."<br><b>Ação:</b>".$val->acao;
+    return "FORÇA: ".$this->competencias($val->forca)." /// AÇÃO: ".$val->acao;
   }
 
   protected function getE2Fragilidade3Attribute($value){
     $val=json_decode($value);
-    return "<b>Fragilidade:</b> ".$this->competencias($val->fragilidade)."<br><b>Ação:</b>".$val->acao;
+    return "FRAGILIDADE: ".$this->competencias($val->fragilidade)." /// AÇÃO:".$val->acao;
   }
 
   protected function getE2Fragilidade2Attribute($value){
     $val=json_decode($value);
-    return "<b>Fragilidade:</b> ".$this->competencias($val->fragilidade)."<br><b>Ação:</b>".$val->acao;
+    return "FRAGILIDADE: ".$this->competencias($val->fragilidade)." /// AÇÃO:".$val->acao;
   }
 
   protected function getE2Fragilidade1Attribute($value){
     $val=json_decode($value);
-    return "<b>Fragilidade:</b> ".$this->competencias($val->fragilidade)."<br><b>Ação:</b>".$val->acao;
+    return "FRAGILIDADE: ".$this->competencias($val->fragilidade)." /// AÇÃO:".$val->acao;
   }
 
   protected function getE1DataNascimentoAttribute($value){

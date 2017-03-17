@@ -282,55 +282,55 @@ Sizes: [
 						<table bgcolor="#FFFFFF"  border="0" cellpadding="0" cellspacing="0" width="500" id="emailBody">
 
 
-							<!-- MODULE ROW // -->
-								<tr>
-									<td align="center" valign="top">
-										<!-- CENTERING TABLE // -->
-										<table border="0" cellpadding="0"  bgcolor="#e82219" cellspacing="0" width="100%">
-											<tr>
-												<td align="center" valign="top">
-													<!-- FLEXIBLE CONTAINER // -->
-													<table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
-														<tr>
-															<td align="center" valign="top" width="250" class="flexibleContainerCell">
+						<!-- MODULE ROW // -->
+							<tr>
+								<td align="center" valign="top">
+									<!-- CENTERING TABLE // -->
+									<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td align="center" valign="top">
+												<!-- FLEXIBLE CONTAINER // -->
+												<table border="0" cellpadding="30" cellspacing="0" width="500" class="flexibleContainer" bgcolor="#e82219">
+													<tr>
+														<td valign="top" width="500" class="flexibleContainerCell">
 
-																<!-- CONTENT TABLE // -->
-																<table border="0" cellpadding="0" cellspacing="0" width="100%">
-																	<tr>
-																		<td valign="top" class="imageContent">
-																			<img src="http://pde.boomit.co/app/assets/img/logoIJ.svg" width="250" class="flexibleImage" style="max-width:250px;width:100%;display:block;" alt="Shell Iniciativa Jovem" title="Shell Iniciativa Jovem" />
-																		</td>
-																	</tr>
-																</table>
-																<!-- // CONTENT TABLE -->
+															<!-- CONTENT TABLE // -->
+															<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+																<tr>
+																	<td align="left" valign="top" class="flexibleContainerBox">
+																		<table border="0" cellpadding="0" cellspacing="0" width="210" style="max-width:100%;">
+																			<tr>
+																				<td align="left" class="textContent">
+																					<img src="http://pde.boomit.co/app/assets/img/logoIJ.svg" width="210" class="flexibleImage" style="max-width:100%;" alt="Shell Iniciativa Jovem" title="Shell Iniciativa Jovem" />
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td align="right" valign="middle" class="flexibleContainerBox">
+																		<table class="flexibleContainerBoxNext" border="0" cellpadding="0" cellspacing="0" width="210" style="max-width:100%;">
+																			<tr>
+																				<td align="left" class="textContent">
+																					<img src="http://pde.boomit.co/app/assets/img/logoIE.svg" width="210" class="flexibleImage" style="max-width:100%;" alt="Shell Iniciativa Empreendedora" title="Shell Iniciativa Empreendedora" />
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+															<!-- // CONTENT TABLE -->
 
-															</td>
-														</tr>
-
-														<tr>
-															<td align="center" valign="top" width="250" class="flexibleContainerCell">
-
-																<!-- CONTENT TABLE // -->
-																<table border="0" cellpadding="0" cellspacing="0" width="100%">
-																	<tr>
-																		<td valign="top" class="imageContent">
-																			<img src="http://pde.boomit.co/app/assets/img/logoIE.svg" width="250" class="flexibleImage" style="max-width:250px;width:100%;display:block;" alt="Shell Iniciativa Empreendedora" title="Shell Iniciativa Empreendedora" />
-																		</td>
-																	</tr>
-																</table>
-																<!-- // CONTENT TABLE -->
-
-															</td>
-														</tr>
-													</table>
-													<!-- // FLEXIBLE CONTAINER -->
-												</td>
-											</tr>
-										</table>
-										<!-- // CENTERING TABLE -->
-									</td>
-								</tr>
+														</td>
+													</tr>
+												</table>
+												<!-- // FLEXIBLE CONTAINER -->
+											</td>
+										</tr>
+									</table>
+									<!-- // CENTERING TABLE -->
+								</td>
+							</tr>
 							<!-- // MODULE ROW -->
+
 
 							<!-- MODULE ROW // -->
 							<!--

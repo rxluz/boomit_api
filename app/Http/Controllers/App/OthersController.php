@@ -292,7 +292,7 @@ class OthersController extends Controller
     $totalInside=0;
 
 
-    for($data as $d){
+    foreach($data as $d){
       if($d["included"]==false && $totalInside<=$total){
         $list[]=$d;
         $totalInside++;

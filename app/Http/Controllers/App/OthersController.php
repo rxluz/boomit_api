@@ -297,14 +297,14 @@ class OthersController extends Controller
     return $data;
   }
 
-  private function getPeopleGroup($name, $data, $total){
+  private function getPeopleGroup($name, $total){
     $list=[];
     $totalInside=1;
 
     //search for different skills
     $skills=[];
 
-    foreach($data as $d){
+    foreach($this->dataGroup as $d){
       $d["group"]=$name;
       if($d["included"]==false && $totalInside<=$total){
         $inc=true;
@@ -317,16 +317,18 @@ class OthersController extends Controller
         if($inc){
           $skills[]=$d["e2_mantem_forca"];
           $list[]=$d;
+          $this->dataGroup[$d["e1_email"]]["included"]=true;
           $totalInside++;
         }
       }
     }
 
     if($totalInside<$total){
-      foreach($data as $d){
+      foreach($this->dataGroup as $d){
         $d["group"]=$name;
         if($d["included"]==false && $totalInside<=$total){
           $list[]=$d;
+          $this->dataGroup[$d["e1_email"]]["included"]=true;
           $totalInside++;
           //
           //
@@ -347,9 +349,12 @@ class OthersController extends Controller
     return $list;
   }
 
+
+  protected $dataGroup=[];
+
   public function reportShellQuizV3(){
 
-    $data=$this->getApproved();
+    $this->dataGroup=$this->getApproved();
     $endData=[];
     $x=1;
 
@@ -357,9 +362,9 @@ class OthersController extends Controller
 
     while($x<11){
       $endData[$x]["name"] = "Grupo ".$x;
-      $endData[$x]["pessoas"] = $this->getPeopleGroup($endData[$x]["name"], $data, rand(rand(7, 8),8));
+      $endData[$x]["pessoas"] = $this->getPeopleGroup($endData[$x]["name"], 8);
 
-      $data=$this->setPeopleAsIncluded($data, $endData[$x]["pessoas"]);
+      //$data=$this->setPeopleAsIncluded($data, $endData[$x]["pessoas"]);
       $tempData=$endData[$x]["pessoas"];
       foreach($tempData as $tem){
         $csv->insertOne($tem);

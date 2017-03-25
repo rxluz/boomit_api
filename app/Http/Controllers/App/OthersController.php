@@ -336,7 +336,7 @@ class OthersController extends Controller
          $sort_col[$key] = $row[$col];
      }
 
-     array_multisort($sort_col, $dir, $arr);
+     return array_multisort($sort_col, $dir, $arr);
   }
 
   public function reportShellQuizV3(){
@@ -353,8 +353,8 @@ class OthersController extends Controller
 
       //$data=$this->setPeopleAsIncluded($data, $endData[$x]["pessoas"]);
       $tempData=$this->aasort($endData[$x]["pessoas"], 'e2_mantem_forca');
-      print_r($tempData);
-      exit;
+      //print_r($tempData);
+      //exit;
 
       foreach($tempData as $tem){
         $csv->insertOne($tem);

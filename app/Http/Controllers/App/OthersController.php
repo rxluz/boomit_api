@@ -321,7 +321,7 @@ class OthersController extends Controller
         }
       }
     }
-    echo json_decode($list);
+    echo json_encode($list);
     return $list;
   }
 

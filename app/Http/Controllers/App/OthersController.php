@@ -284,6 +284,14 @@ class OthersController extends Controller
   }
 
   private function setPeopleAsIncluded($data, $people){
+    foreach($data as $d){
+      foreach($people as $p){
+        if($p["id"]==$d["id"]){
+          $data[$d["e1_email"]]["included"]=true;
+        }
+      }
+    }
+    
     return $data;
   }
 

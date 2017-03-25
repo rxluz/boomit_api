@@ -534,6 +534,14 @@ use Illuminate\Database\Eloquent\Model;
     return "NA";
   }
 
+  protected function getE3ComoEntreiAttribute($value){
+    return trim($value) =="" ? "NA" : $value;
+  }
+
+  protected function getE3ComoSaioAttribute($value){
+    return trim($value) =="" ? "NA" : $value;
+  }
+
   protected function getE1FracassouAntesAttribute($value){
     switch(strtolower($value)){
       case 'a':

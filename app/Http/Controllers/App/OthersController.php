@@ -321,7 +321,7 @@ class OthersController extends Controller
         }
       }
     }
-
+    echo json_decode($list);
     return $list;
   }
 
@@ -352,9 +352,9 @@ class OthersController extends Controller
       $endData[$x]["pessoas"] = $this->getPeopleGroup($endData[$x]["name"], 8);
 
       //$data=$this->setPeopleAsIncluded($data, $endData[$x]["pessoas"]);
-      $tempData=$this->aasort($endData[$x]["pessoas"], 'e2_mantem_forca');
-      print_r($tempData);
-      exit;
+      $tempData=$endData[$x]["pessoas"];
+      //print_r($tempData);
+      //exit;
 
       foreach($tempData as $tem){
         $csv->insertOne($tem);

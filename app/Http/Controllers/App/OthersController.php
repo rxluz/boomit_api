@@ -355,7 +355,11 @@ class OthersController extends Controller
 
       $ddd=$endData[$x]["pessoas"];
 
-      $tempData=$this->aasort($ddd, 'e2_mantem_forca');
+      usort($ddd, function ($a, $b) {
+        return strcmp($a['e2_mantem_forca'], $b['e2_mantem_forca']);
+      });
+      
+      $tempData=$ddd;
       //print_r($tempData);
       //exit;
 

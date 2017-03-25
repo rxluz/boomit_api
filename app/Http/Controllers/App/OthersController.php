@@ -359,8 +359,11 @@ class OthersController extends Controller
       $endData[$x]["pessoas"] = $this->getPeopleGroup($endData[$x]["name"], $data, rand(rand(7, 8),8));
 
       $data=$this->setPeopleAsIncluded($data, $endData[$x]["pessoas"]);
+      $tempData=$endData[$x]["pessoas"];
+      foreach($tempData as $tem){
+        $csv->insertOne($tem);  
+      }
 
-      $csv->insertOne($endData[$x]["pessoas"]);
 
 
       $x++;

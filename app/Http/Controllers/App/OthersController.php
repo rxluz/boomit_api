@@ -262,7 +262,7 @@ class OthersController extends Controller
 
   public function reportShellQuizV2(){
     //return response('olar mundo', 200);
-    return reportShellQuiz(true);
+    return $this->reportShellQuiz(true);
   }
 
 

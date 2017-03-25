@@ -321,6 +321,27 @@ class OthersController extends Controller
       }
     }
 
+    if($totalInside<$total){
+      foreach($data as $d){
+        if($d["included"]==false && $totalInside<=$total){
+          $list[]=$d;
+          $totalInside++;
+          //
+          //
+          // $inc=true;
+          // foreach($skills as $skill){
+          //     if($skill == $d["e2_mantem_forca"]){
+          //       $inc=false;
+          //     }
+          // }
+          //
+          // if($inc){
+          //   $skills[]=$d["e2_mantem_forca"];
+          // }
+        }
+      }
+    }
+
     return $list;
   }
 

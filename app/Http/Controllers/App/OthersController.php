@@ -281,7 +281,7 @@ class OthersController extends Controller
   public function reportShellQuizV3(){
 
 
-    return response(getApproved(), 200);
+    return response($this->getApproved(), 200);
   }
 
 

@@ -283,6 +283,7 @@ class OthersController extends Controller
 
     $data=[];
     foreach ($quiz as $answer) {
+        $answer->e1_email=strtolower($answer->e1_email);
         $answer->e2_forca_1=$answer->e2_forca_1;
         $answer->e2_forca_2=$answer->e2_forca_2;
         $answer->e2_forca_3=$answer->e2_forca_3;
@@ -290,13 +291,13 @@ class OthersController extends Controller
         $answer->e2_fragilidade_2=$answer->e2_fragilidade_2;
         $answer->e2_fragilidade_3=$answer->e2_fragilidade_3;
 
-        $data[$answer->e1_email]=$answer;
+        $data[strtolower($answer->e1_email)]=$answer;
 
 
     }
 
     foreach($data as $item){
-      $csv->insertOne($item->toArray());  
+      $csv->insertOne($item->toArray());
     }
 
     $csv->output('relatorio_shell'.date('Ymdhis').'.csv');

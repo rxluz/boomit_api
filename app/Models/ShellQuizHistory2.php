@@ -230,7 +230,7 @@ use Illuminate\Database\Eloquent\Model;
 
     $value=isset($newvalue) ? $newvalue."." : $value;
 
-    return str_replace(",.", "", $value);
+    return str_replace(",.", "", str_replace("{}", "NA", $value));
   }
 
   protected function getE2CompetenciasAttribute($value){
@@ -244,7 +244,7 @@ use Illuminate\Database\Eloquent\Model;
 
     $value=isset($newvalue) ? $newvalue."." : $value;
 
-    return str_replace(",.", "", $value);
+    return str_replace(",.", "", str_replace("{}", "NA", $value));
   }
 
   protected function getE2FragilidadesAttribute($value){
@@ -258,7 +258,7 @@ use Illuminate\Database\Eloquent\Model;
 
     $value=isset($newvalue) ? $newvalue."." : $value;
 
-    return str_replace(",.", "", $value);
+    return str_replace(",.", "", str_replace("{}", "NA", $value));
   }
 
   protected function getE2ForcasFinalAttribute($value){
@@ -272,7 +272,7 @@ use Illuminate\Database\Eloquent\Model;
 
     $value=isset($newvalue) ? $newvalue."." : $value;
 
-    return str_replace(",.", "", $value);
+      return str_replace(",.", "", str_replace("{}", "NA", $value));
   }
 
   protected function getE2FragilidadesFinalAttribute($value){
@@ -285,7 +285,7 @@ use Illuminate\Database\Eloquent\Model;
 
     $value=isset($newvalue) ? $newvalue."." : $value;
 
-    return str_replace(",.", "", $value);
+    return str_replace(",.", "", str_replace("{}", "NA", $value));
   }
 
 

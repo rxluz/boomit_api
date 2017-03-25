@@ -286,12 +286,12 @@ class OthersController extends Controller
   private function setPeopleAsIncluded($data, $people){
     foreach($data as $d){
       foreach($people as $p){
-        if($p["id"]==$d["id"]){
+        if($p["id"] === $d["id"]){
           $data[$d["e1_email"]]["included"]=true;
         }
       }
     }
-    
+
     return $data;
   }
 
@@ -320,7 +320,7 @@ class OthersController extends Controller
       $endData[$x]["name"] = "Grupo ".$x;
       $endData[$x]["pessoas"] = $this->getPeopleGroup($data, rand(rand(7, 8),8));
 
-      $data=$this->setPeopleAsIncluded($endData[$x]["pessoas"], $data);
+      $data=$this->setPeopleAsIncluded($data, $endData[$x]["pessoas"]);
 
 
       $x++;

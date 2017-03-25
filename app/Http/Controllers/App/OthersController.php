@@ -283,19 +283,7 @@ class OthersController extends Controller
     return $data;
   }
 
-  private function setPeopleAsIncluded($data, $people){
 
-
-    foreach($data as $d){
-      foreach($people as $p){
-        if($p["id"] === $d["id"]){
-          $data[$d["e1_email"]]["included"]=true;
-        }
-      }
-    }
-
-    return $data;
-  }
 
   private function getPeopleGroup($name, $total){
     $list=[];
@@ -355,7 +343,7 @@ class OthersController extends Controller
       //$data=$this->setPeopleAsIncluded($data, $endData[$x]["pessoas"]);
       $tempData=$endData[$x]["pessoas"];
       foreach($tempData as $tem){
-        $csv->insertOne($tem);
+        $csv->insertOne(array_sort($tem, 'e2_mantem_forca', SORT_ASC));
       }
 
 

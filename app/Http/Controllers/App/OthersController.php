@@ -267,7 +267,7 @@ class OthersController extends Controller
 
 
   private function getApproved(){
-    $quiz = ShellQuizHistory2::select('id', 'e1_nome_completo', 'e2_mantem_forca')->where('approved', '1')->get();
+    $quiz = ShellQuizHistory2::select('id', 'e1_nome_completo', 'e1_email', 'e2_mantem_forca')->where('approved', '1')->get();
 
     $data=[];
     foreach ($quiz as $answer) {

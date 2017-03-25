@@ -328,6 +328,22 @@ class OthersController extends Controller
 
   protected $dataGroup=[];
 
+
+
+  private function aasort (&$array, $key) {
+      $sorter=array();
+      $ret=array();
+      reset($array);
+      foreach ($array as $ii => $va) {
+          $sorter[$ii]=$va[$key];
+      }
+      asort($sorter);
+      foreach ($sorter as $ii => $va) {
+          $ret[$ii]=$array[$ii];
+      }
+      $array=$ret;
+  }
+
   public function reportShellQuizV3(){
 
     $this->dataGroup=$this->getApproved();
@@ -341,9 +357,8 @@ class OthersController extends Controller
       $endData[$x]["pessoas"] = $this->getPeopleGroup($endData[$x]["name"], 8);
 
       //$data=$this->setPeopleAsIncluded($data, $endData[$x]["pessoas"]);
-      $tempData=usort($endData[$x]["pessoas"], function($a, $b){
-        return $a['e2_mantem_forca'] <=> $b['e2_mantem_forca'];
-      });
+      $tempData=$this->aasort($endData[$x]["pessoas"], 'e2_mantem_forca');
+
       foreach($tempData as $tem){
         $csv->insertOne($tem);
       }

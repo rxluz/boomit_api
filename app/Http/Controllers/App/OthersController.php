@@ -297,7 +297,7 @@ class OthersController extends Controller
     return $data;
   }
 
-  private function getPeopleGroup($data, $total){
+  private function getPeopleGroup($name, $data, $total){
     $list=[];
     $totalInside=0;
 
@@ -305,6 +305,7 @@ class OthersController extends Controller
     $skills=[];
 
     foreach($data as $d){
+      $d["group"]=$name;
       if($d["included"]==false && $totalInside<=$total){
         $inc=true;
         foreach($skills as $skill){
@@ -351,18 +352,23 @@ class OthersController extends Controller
     $endData=[];
     $x=1;
 
+    $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject());
+
     while($x<11){
       $endData[$x]["name"] = "Grupo ".$x;
-      $endData[$x]["pessoas"] = $this->getPeopleGroup($data, rand(rand(7, 8),8));
+      $endData[$x]["pessoas"] = $this->getPeopleGroup($endData[$x]["name"], $data, rand(rand(7, 8),8));
 
       $data=$this->setPeopleAsIncluded($data, $endData[$x]["pessoas"]);
+
+      $csv->insertOne($endData[$x]["pessoas"]);
 
 
       $x++;
     }
 
 
-    return response($endData, 200);
+    //return response($endData, 200);
+    $csv->output('relatorio_shell_grupos'.date('Ymdhis').'.csv');
   }
 
 

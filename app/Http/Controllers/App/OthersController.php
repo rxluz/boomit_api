@@ -271,6 +271,8 @@ class OthersController extends Controller
 
     if(!$alldata){
       $quiz = ShellQuizHistory2::where('e3_como_saio', '!=', '')->get();
+    }else{
+      $quiz = ShellQuizHistory2::get();
     }
 
 

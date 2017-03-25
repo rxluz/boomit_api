@@ -323,25 +323,13 @@ class OthersController extends Controller
       }
     }
 
-    if($totalInside<$total){
+    if($totalInside<=$total){
       foreach($this->dataGroup as $d){
         $d["group"]=$name;
         if($d["included"]==false && $totalInside<=$total){
           $list[]=$d;
           $this->dataGroup[$d["e1_email"]]["included"]=true;
           $totalInside++;
-          //
-          //
-          // $inc=true;
-          // foreach($skills as $skill){
-          //     if($skill == $d["e2_mantem_forca"]){
-          //       $inc=false;
-          //     }
-          // }
-          //
-          // if($inc){
-          //   $skills[]=$d["e2_mantem_forca"];
-          // }
         }
       }
     }

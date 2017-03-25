@@ -266,8 +266,22 @@ class OthersController extends Controller
   }
 
 
+  private function getApproved(){
+    $quiz = ShellQuizHistory2::select('id', '	e1_nome_completo', 'e2_mantem_forca')->where('approved', '1')->get();
+
+    $data=[];
+    foreach ($quiz as $answer) {
+        $answer->e1_email=strtolower($answer->e1_email);
+        $data[strtolower($answer->e1_email)]=$answer;
+    }
+
+    return $data;
+  }
+
   public function reportShellQuizV3(){
-    return response('v3 interceptor', 200);
+
+
+    return response(getApproved(), 200);
   }
 
 

@@ -352,7 +352,10 @@ class OthersController extends Controller
       $endData[$x]["pessoas"] = $this->getPeopleGroup($endData[$x]["name"], 8);
 
       //$data=$this->setPeopleAsIncluded($data, $endData[$x]["pessoas"]);
-      $tempData=$this->aasort($endData[$x]["pessoas"], 'e2_mantem_forca');
+
+      $ddd=$endData[$x]["pessoas"];
+
+      $tempData=$this->aasort($ddd, 'e2_mantem_forca');
       //print_r($tempData);
       //exit;
 

@@ -341,9 +341,9 @@ class OthersController extends Controller
       $endData[$x]["pessoas"] = $this->getPeopleGroup($endData[$x]["name"], 8);
 
       //$data=$this->setPeopleAsIncluded($data, $endData[$x]["pessoas"]);
-      $tempData=$endData[$x]["pessoas"];
+      $tempData=array_sort($endData[$x]["pessoas"], 'e2_mantem_forca', SORT_ASC);
       foreach($tempData as $tem){
-        $csv->insertOne(array_sort($tem, 'e2_mantem_forca', SORT_ASC));
+        $csv->insertOne($tem);
       }
 
 

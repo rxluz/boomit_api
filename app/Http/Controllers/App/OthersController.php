@@ -261,14 +261,18 @@ class OthersController extends Controller
   }
 
   public function reportShellQuizV2(){
-    return response('olar mundo', 200);
+    //return response('olar mundo', 200);
+    return reportShellQuiz(true);
   }
 
 
-  public function reportShellQuiz(){
+  public function reportShellQuiz($alldata=false){
     //$people=$this->shell_quiz_history->where('e3_como_saio', "!=", "")->get();
 
-    $quiz = ShellQuizHistory2::where('e3_como_saio', '!=', '')->get();
+    if(!$alldata){
+      $quiz = ShellQuizHistory2::where('e3_como_saio', '!=', '')->get();
+    }
+
 
     $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject());
 

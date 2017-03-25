@@ -304,7 +304,7 @@ class OthersController extends Controller
 
         if($inc){
           $skills[]=$d["e2_mantem_forca"];
-          $list[]=$d;
+          $list[$d["id"]]=$d;
           $this->dataGroup[$d["e1_email"]]["included"]=true;
           $totalInside++;
         }
@@ -315,7 +315,7 @@ class OthersController extends Controller
       foreach($this->dataGroup as $d){
         $d["group"]=$name;
         if($d["included"]==false && $totalInside<=$total){
-          $list[]=$d;
+          $list[$d["id"]]=$d;
           $this->dataGroup[$d["e1_email"]]["included"]=true;
           $totalInside++;
         }

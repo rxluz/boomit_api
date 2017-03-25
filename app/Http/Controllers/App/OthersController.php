@@ -284,6 +284,8 @@ class OthersController extends Controller
   }
 
   private function setPeopleAsIncluded($data, $people){
+
+
     foreach($data as $d){
       foreach($people as $p){
         if($p["id"] === $d["id"]){
@@ -299,11 +301,23 @@ class OthersController extends Controller
     $list=[];
     $totalInside=0;
 
+    //search for different skills
+    $skills=[];
 
     foreach($data as $d){
       if($d["included"]==false && $totalInside<=$total){
-        $list[]=$d;
-        $totalInside++;
+        $inc=true;
+        foreach($skills as $skill){
+            if($skill == $d["e2_mantem_forca"]){
+              $inc=false;
+            }
+        }
+
+        if($inc){
+          $skills[]=$d["e2_mantem_forca"];
+          $list[]=$d;
+          $totalInside++;
+        }
       }
     }
 

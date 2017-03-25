@@ -330,7 +330,7 @@ class OthersController extends Controller
 
 
 
-  private function aasort (&$array, $key) {
+  private function aasort (&$arr, $col, $dir = SORT_ASC) {
     $sort_col = array();
      foreach ($arr as $key=> $row) {
          $sort_col[$key] = $row[$col];

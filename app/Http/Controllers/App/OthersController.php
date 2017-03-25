@@ -299,7 +299,7 @@ class OthersController extends Controller
 
   private function getPeopleGroup($name, $data, $total){
     $list=[];
-    $totalInside=0;
+    $totalInside=1;
 
     //search for different skills
     $skills=[];

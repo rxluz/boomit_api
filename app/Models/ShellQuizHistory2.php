@@ -80,34 +80,34 @@ use Illuminate\Database\Eloquent\Model;
   //protected $hidden = [''];
 
   protected function getE2Forca1Attribute($value){
-    $val=json_decode($value);
+    $val=json_decode($value) ?? [];
 
-    return "FORÇA: ".$this->competencias($val->forca)." /// AÇÃO: ".$val->acao;
+    return "FORÇA: ".$this->competencias($val->forca ?? "")." /// AÇÃO: ".($val->acao ?? "NA");
   }
 
   protected function getE2Forca2Attribute($value){
     $val=json_decode($value);
-    return "FORÇA: ".$this->competencias($val->forca)." /// AÇÃO: ".$val->acao;
+    return "FORÇA: ".$this->competencias($val->forca ?? "")." /// AÇÃO: ".($val->acao ?? "NA");
   }
 
   protected function getE2Forca3Attribute($value){
     $val=json_decode($value);
-    return "FORÇA: ".$this->competencias($val->forca)." /// AÇÃO: ".$val->acao;
+    return "FORÇA: ".$this->competencias($val->forca ?? "")." /// AÇÃO: ".($val->acao ?? "NA");
   }
 
   protected function getE2Fragilidade3Attribute($value){
     $val=json_decode($value);
-    return "FRAGILIDADE: ".$this->competencias($val->fragilidade)." /// AÇÃO:".$val->acao;
+    return "FRAGILIDADE: ".$this->competencias($val->fragilidade ?? "")." /// AÇÃO:".($val->acao ?? "NA");
   }
 
   protected function getE2Fragilidade2Attribute($value){
     $val=json_decode($value);
-    return "FRAGILIDADE: ".$this->competencias($val->fragilidade)." /// AÇÃO:".$val->acao;
+    return "FRAGILIDADE: ".$this->competencias($val->fragilidade ?? "")." /// AÇÃO:".($val->acao ?? "NA");
   }
 
   protected function getE2Fragilidade1Attribute($value){
     $val=json_decode($value);
-    return "FRAGILIDADE: ".$this->competencias($val->fragilidade)." /// AÇÃO:".$val->acao;
+    return "FRAGILIDADE: ".$this->competencias($val->fragilidade ?? "")." /// AÇÃO:".($val->acao ?? "NA");
   }
 
   protected function getE1DataNascimentoAttribute($value){
@@ -174,7 +174,6 @@ use Illuminate\Database\Eloquent\Model;
   }
 
   protected function getE2MantemForcaAttribute($value){
-
     return $this->competencias($value);
   }
 
@@ -193,7 +192,6 @@ use Illuminate\Database\Eloquent\Model;
 
   protected function getE2MantemFragilidadeAttribute($value){
     return $this->competencias($value);
-
   }
 
 
@@ -218,8 +216,6 @@ use Illuminate\Database\Eloquent\Model;
     }
     return "NA";
   }
-
-
 
 
 

@@ -260,7 +260,9 @@ class OthersController extends Controller
     return response($shell_quiz, 200);
   }
 
-
+  public function reportShellQuizV2(){
+    return response('olar mundo', 200);
+  }
 
 
   public function reportShellQuiz(){

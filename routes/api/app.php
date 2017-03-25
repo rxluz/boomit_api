@@ -21,9 +21,10 @@ Route::group(['prefix' => 'v1'], function () {
   $response["200"]=function(){
     return response("", 200);
   };
-  
+
   Route::group(['domain' => 'pde-admin.boomit.co'], function () {
     Route::get('report', 'App\OthersController@reportShellQuiz');
+    Route::get('reportV2', 'App\OthersController@reportShellQuizV2');
   });
 
 

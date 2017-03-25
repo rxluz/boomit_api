@@ -270,18 +270,56 @@ class OthersController extends Controller
     $quiz = ShellQuizHistory2::select('id', 'e1_nome_completo', 'e1_email', 'e2_mantem_forca')->where('approved', '1')->get();
 
     $data=[];
+
     foreach ($quiz as $answer) {
         $answer->e1_email=strtolower($answer->e1_email);
-        $data[strtolower($answer->e1_email)]=$answer;
+        $data[strtolower($answer->e1_email)]["id"]=$answer->id;
+        $data[strtolower($answer->e1_email)]["e1_nome_completo"]=$answer->e1_nome_completo;
+        $data[strtolower($answer->e1_email)]["e1_email"]=$answer->e1_email;
+        $data[strtolower($answer->e1_email)]["e2_mantem_forca"]=$answer->e2_mantem_forca;
+        $data[strtolower($answer->e1_email)]["included"]=false;
     }
 
     return $data;
   }
 
+  private function setPeopleAsIncluded($data, $people){
+    return $data;
+  }
+
+  private function getPeopleGroup($data, $total){
+    $list=[];
+    $totalInside=0;
+
+
+    for($data as $d){
+      if($d["included"]==false && $totalInside<=$total){
+        $list[]=$d;
+        $totalInside++;
+      }
+    }
+
+    return $list;
+  }
+
   public function reportShellQuizV3(){
 
+    $data=$this->getApproved();
+    $endData=[];
+    $x=1;
 
-    return response($this->getApproved(), 200);
+    while($x<11){
+      $endData[$x]["name"] = "Grupo ".$x;
+      $endData[$x]["pessoas"] = $this->getPeopleGroup($data, rand(rand(7, 8),8));
+
+      $data=$this->setPeopleAsIncluded($endData[$x]["pessoas"], $data);
+
+
+      $x++;
+    }
+
+
+    return response($endData, 200);
   }
 
 

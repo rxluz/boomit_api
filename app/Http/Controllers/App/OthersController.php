@@ -266,6 +266,11 @@ class OthersController extends Controller
   }
 
 
+  public function reportShellQuizV3(){
+    return response('v3 interceptor', 200);
+  }
+
+
   public function reportShellQuiz($alldata=false){
     //$people=$this->shell_quiz_history->where('e3_como_saio', "!=", "")->get();
 

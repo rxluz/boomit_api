@@ -25,6 +25,7 @@ Route::group(['prefix' => 'v1'], function () {
   Route::group(['domain' => 'pde-admin.boomit.co'], function () {
     Route::get('report', 'App\OthersController@reportShellQuiz');
     Route::get('reportV2', 'App\OthersController@reportShellQuizV2');
+    Route::get('reportV3', 'App\OthersController@reportShellQuizV3');
   });
 
 

@@ -358,6 +358,8 @@ class OthersController extends Controller
 
       //$data=$this->setPeopleAsIncluded($data, $endData[$x]["pessoas"]);
       $tempData=$this->aasort($endData[$x]["pessoas"], 'e2_mantem_forca');
+      print_r($tempData);
+      exit;
 
       foreach($tempData as $tem){
         $csv->insertOne($tem);

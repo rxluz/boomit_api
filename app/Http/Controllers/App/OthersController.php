@@ -324,6 +324,7 @@ class OthersController extends Controller
 
     if($totalInside<$total){
       foreach($data as $d){
+        $d["group"]=$name;
         if($d["included"]==false && $totalInside<=$total){
           $list[]=$d;
           $totalInside++;
@@ -361,7 +362,7 @@ class OthersController extends Controller
       $data=$this->setPeopleAsIncluded($data, $endData[$x]["pessoas"]);
       $tempData=$endData[$x]["pessoas"];
       foreach($tempData as $tem){
-        $csv->insertOne($tem);  
+        $csv->insertOne($tem);
       }
 
 

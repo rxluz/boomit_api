@@ -336,7 +336,7 @@ class OthersController extends Controller
          $sort_col[$key] = $row[$col];
      }
 
-     return array_multisort($sort_col, $dir, $arr);
+     array_multisort($sort_col, $dir, $arr);
   }
 
   public function reportShellQuizV3(){

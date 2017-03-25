@@ -280,6 +280,8 @@ class OthersController extends Controller
 
     $csv->insertOne(\Schema::getColumnListing('shell_quiz_history'));
 
+
+    $data=[];
     foreach ($quiz as $answer) {
         $answer->e2_forca_1=$answer->e2_forca_1;
         $answer->e2_forca_2=$answer->e2_forca_2;
@@ -288,7 +290,13 @@ class OthersController extends Controller
         $answer->e2_fragilidade_2=$answer->e2_fragilidade_2;
         $answer->e2_fragilidade_3=$answer->e2_fragilidade_3;
 
-        $csv->insertOne($answer->toArray());
+        $data[$answer->e1_email]=$answer;
+
+
+    }
+
+    foreach($data as $item){
+      $csv->insertOne($item->toArray());  
     }
 
     $csv->output('relatorio_shell'.date('Ymdhis').'.csv');

@@ -348,6 +348,8 @@ class OthersController extends Controller
 
     $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject());
 
+    $csv->insertOne(['ID', 'Nome', 'E-mail', 'Principal força', 'Principal fraqueza']);
+
     while($x<11){
       $endData[$x]["name"] = "Grupo ".$x;
       $endData[$x]["pessoas"] = $this->getPeopleGroup($endData[$x]["name"], 8);

@@ -341,7 +341,7 @@ use Illuminate\Database\Eloquent\Model;
       break;
 
       case 'i':
-        return 'Resposabilidade Social';
+        return 'Responsabilidade Social';
       break;
 
     }

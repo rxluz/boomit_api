@@ -267,7 +267,7 @@ class OthersController extends Controller
 
 
   private function getApproved(){
-    $quiz = ShellQuizHistory2::select('id', 'e1_nome_completo', 'e1_email', 'e2_mantem_forca')->where('approved', '1')->get();
+    $quiz = ShellQuizHistory2::select('id', 'e1_nome_completo', 'e1_email', 'e2_mantem_forca', 'e2_mantem_fragilidade')->where('approved', '1')->get();
 
     $data=[];
 
@@ -277,6 +277,7 @@ class OthersController extends Controller
         $data[strtolower($answer->e1_email)]["e1_nome_completo"]=$answer->e1_nome_completo;
         $data[strtolower($answer->e1_email)]["e1_email"]=$answer->e1_email;
         $data[strtolower($answer->e1_email)]["e2_mantem_forca"]=$answer->e2_mantem_forca;
+        $data[strtolower($answer->e1_email)]["e2_mantem_fragilidade"]=$answer->e2_mantem_fragilidade;
         $data[strtolower($answer->e1_email)]["included"]=false;
     }
 
@@ -358,7 +359,7 @@ class OthersController extends Controller
       usort($ddd, function ($a, $b) {
         return strcmp($a['e2_mantem_forca'], $b['e2_mantem_forca']);
       });
-      
+
       $tempData=$ddd;
       //print_r($tempData);
       //exit;
